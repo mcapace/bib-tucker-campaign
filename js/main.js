@@ -5,29 +5,6 @@
 // DOM Elements - Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===========================
-    // PRELOADER
-    // ===========================
-    const preloader = document.getElementById('preloader');
-    
-    // Hide preloader after page loads
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            if (preloader) {
-                preloader.classList.add('hide');
-            }
-            initializeAnimations();
-        }, 1500);
-    });
-    
-    // Fallback - hide preloader after 3 seconds regardless
-    setTimeout(() => {
-        if (preloader && !preloader.classList.contains('hide')) {
-            preloader.classList.add('hide');
-            initializeAnimations();
-        }
-    }, 3000);
-    
     // Get DOM elements
     const navbar = document.getElementById('navbar');
     const hamburger = document.getElementById('hamburger');
@@ -35,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeWidget = document.getElementById('currentTime');
     const heroBgs = document.querySelectorAll('.hero-bg');
     const navLinks = document.querySelectorAll('.nav-link');
+
+    // ===========================
+    // INITIALIZE ANIMATIONS ON LOAD
+    // ===========================
+    window.addEventListener('load', () => {
+        initializeAnimations();
+    });
 
     // ===========================
     // NAVIGATION
