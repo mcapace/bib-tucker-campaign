@@ -200,14 +200,13 @@ function initializeBudgetChart() {
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Whisky Advocate', 'Trade & Events', 'Digital Experience', 'Influencers'],
+                labels: ['Whisky Advocate', 'Trade & Events', 'Digital Experience'],
                 datasets: [{
-                    data: [321510, 86697, 41793, 40000],
+                    data: [321510, 86697, 41793],
                     backgroundColor: [
                         '#8B0000',
                         '#FFD700',
-                        '#5c0000',
-                        '#ff8c00'
+                        '#5c0000'
                     ],
                     borderWidth: 0
                 }]
@@ -230,8 +229,125 @@ function initializeBudgetChart() {
                         callbacks: {
                             label: function(context) {
                                 const label = context.label || '';
-                                const value = '$' + context.parsed.toLocaleString();
-                                return label + ': ' + value;
+                                const value = '
+
+// ===========================
+// TILT EFFECT
+// ===========================
+function initializeTiltEffect() {
+    const tiltElements = document.querySelectorAll('.tilt-card');
+    
+    tiltElements.forEach(element => {
+        element.addEventListener('mousemove', (e) => {
+            const rect = element.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+}
+
+// ===========================
+// TIMELINE ANIMATION
+// ===========================
+function animateTimeline() {
+    const timelineProgress = document.querySelector('.timeline-progress');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('timeline-progress')) {
+                    entry.target.classList.add('animate');
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    if (timelineProgress) {
+        observer.observe(timelineProgress);
+    }
+}
+
+// ===========================
+// SCROLL ANIMATIONS
+// ===========================
+function initializeScrollAnimations() {
+    const animateElements = document.querySelectorAll('.animate-fade-up, .animate-timeline');
+    
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// ===========================
+// INITIALIZE ALL
+// ===========================
+function initializeAnimations() {
+    animateCounters();
+    initializeBudgetChart();
+    initializeTiltEffect();
+    animateTimeline();
+    initializeScrollAnimations();
+}
+
+// ===========================
+// CUSTOM CURSOR (Optional)
+// ===========================
+const cursor = document.createElement('div');
+cursor.classList.add('custom-cursor');
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mousedown', () => {
+    cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup', () => {
+    cursor.classList.remove('active');
+});
+
+// Add hover effect for interactive elements
+const interactiveElements = document.querySelectorAll('a, button, .btn, .nav-link');
+interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+    });
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
+    });
+}); + context.parsed.toLocaleString();
+                                const total = 450000;
+                                const percentage = Math.round((context.parsed / total) * 100);
+                                return label + ': ' + value + ' (' + percentage + '%)';
                             }
                         }
                     }
