@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bib & Tucker - From Dawn to Dusk Campaign</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="loader-bottle"></div>
+            <p>Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/bib-tucker-logo.png" alt="Bib & Tucker" class="logo-img">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#partners" class="nav-link">Partners</a></li>
+                    <li><a href="#media" class="nav-link">Media</a></li>
+                    <li><a href="#contact" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero" id="home">
+        <div class="hero-bg morning active" data-speed="0.5"></div>
+        <div class="hero-bg evening" data-speed="0.5"></div>
+        <div class="hero-bg transition" data-speed="0.5"></div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-up">From Dawn to Dusk</h1>
+            <p class="hero-subtitle animate-fade-up" data-delay="200">A Digital Journey Through the Bourbon Day</p>
+            <div class="hero-cta animate-fade-up" data-delay="400">
+                <a href="#overview" class="btn btn-primary">Explore Campaign</a>
+                <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="time-widget" id="timeWidget">
+            <i class="fas fa-clock"></i>
+            <span id="currentTime">Morning</span>
+        </div>
+    </section>
+
+    <!-- Campaign Overview with Counter Animation -->
+    <section class="overview section-padding" id="overview">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">Campaign Overview</span>
+                <h2>Q4 2025 - Q1 2026 Integrated Digital Campaign</h2>
+                <p>Positioning Bib & Tucker throughout the bourbon enthusiast's perfect day</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card animate-fade-up" data-delay="100">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3 class="stat-number" data-target="450">0</h3>
+                    <span class="stat-suffix">K</span>
+                    <p>Q4 2025 Investment</p>
+                </div>
+                <div class="stat-card animate-fade-up" data-delay="200">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 class="stat-number" data-target="4">0</h3>
+                    <span class="stat-suffix">Months</span>
+                    <p>Campaign Duration</p>
+                </div>
+                <div class="stat-card animate-fade-up" data-delay="300">
+                    <i class="fas fa-eye"></i>
+                    <h3 class="stat-number" data-target="10">0</h3>
+                    <span class="stat-suffix">M+</span>
+                    <p>Projected Impressions</p>
+                </div>
+                <div class="stat-card animate-fade-up" data-delay="400">
+                    <i class="fas fa-users"></i>
+                    <h3 class="stat-number" data-target="5">0</h3>
+                    <span class="stat-suffix">Partners</span>
+                    <p>Strategic Collaborations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase with 3D Cards -->
+    <section class="products section-padding dark-section" id="products">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">The Portfolio</span>
+                <h2>Three Expressions, One Perfect Day</h2>
+                <p>Each bourbon crafted for a specific moment in your day</p>
+            </div>
+            
+            <div class="product-showcase">
+                <div class="product-card tilt-card animate-fade-up" data-delay="100">
+                    <div class="product-image-wrapper">
+                        <img src="images/gold-roast-bottle.jpg" alt="Gold Roast" class="product-image">
+                        <div class="product-glow gold"></div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-time">6 AM - 12 PM</span>
+                        <h3>Gold Roast</h3>
+                        <p class="product-tagline">Morning Perfection</p>
+                        <div class="product-partner">
+                            <img src="images/muletown-logo.png" alt="Muletown Coffee">
+                            <span>Partnered with Muletown Coffee</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Coffee-infused bourbon</li>
+                            <li>Perfect for morning cocktails</li>
+                            <li>Smooth, awakening finish</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card tilt-card animate-fade-up" data-delay="200">
+                    <div class="product-image-wrapper">
+                        <img src="images/double-char-bottle.jpg" alt="Double Char" class="product-image">
+                        <div class="product-glow red"></div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-time">5 PM - 10 PM</span>
+                        <h3>Double Char</h3>
+                        <p class="product-tagline">Bold Evening Choice</p>
+                        <div class="product-partner">
+                            <img src="images/big-green-egg-logo.png" alt="Big Green Egg">
+                            <span>Partnered with Big Green Egg</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Intense char profile</li>
+                            <li>Perfect with BBQ</li>
+                            <li>Rich, smoky notes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card tilt-card animate-fade-up" data-delay="300">
+                    <div class="product-image-wrapper">
+                        <img src="images/classic-six-bottle.jpg" alt="Classic Six" class="product-image">
+                        <div class="product-glow amber"></div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-time">8 PM - 12 AM</span>
+                        <h3>Classic Six</h3>
+                        <p class="product-tagline">Sophisticated Finish</p>
+                        <div class="product-partner">
+                            <img src="images/big-green-egg-logo.png" alt="Big Green Egg">
+                            <span>Partnered with Big Green Egg</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>6-year aged perfection</li>
+                            <li>Smooth, refined taste</li>
+                            <li>Ideal for neat pours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="timeline section-padding" id="timeline">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">Campaign Timeline</span>
+                <h2>Strategic Rollout Through Q4 2025</h2>
+                <p>A carefully orchestrated launch sequence</p>
+            </div>
+            
+            <div class="timeline-wrapper">
+                <div class="timeline-progress" id="timelineProgress"></div>
+                
+                <div class="timeline-item animate-timeline" data-month="September">
+                    <div class="timeline-marker">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Gold Roast Launch</h3>
+                        <span class="timeline-date">September 1-30, 2025</span>
+                        <p>Morning ritual campaign begins with coffee culture integration</p>
+                        <ul>
+                            <li>Hero video launch</li>
+                            <li>Influencer partnerships activated</li>
+                            <li>Whisky Advocate feature</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-timeline" data-month="October">
+                    <div class="timeline-marker">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Transition Period</h3>
+                        <span class="timeline-date">October 1-31, 2025</span>
+                        <p>Bridge content connecting morning to evening experiences</p>
+                        <ul>
+                            <li>Fall entertaining guides</li>
+                            <li>Halloween cocktail features</li>
+                            <li>BBQ season preview</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-timeline" data-month="November">
+                    <div class="timeline-marker">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Char Campaign</h3>
+                        <span class="timeline-date">November 1-30, 2025</span>
+                        <p>BBQ season activation with Big Green Egg partnership</p>
+                        <ul>
+                            <li>Double Char vs Classic 6 launch</li>
+                            <li>Thanksgiving entertaining</li>
+                            <li>Grilling masterclasses</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-timeline" data-month="December">
+                    <div class="timeline-marker">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Holiday Push</h3>
+                        <span class="timeline-date">December 1-31, 2025</span>
+                        <p>Gift guide integration and year-end celebrations</p>
+                        <ul>
+                            <li>Holiday gift bundles</li>
+                            <li>New Year's Eve content</li>
+                            <li>2026 preview</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Partners -->
+    <section class="partners section-padding" id="partners">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">Strategic Partners</span>
+                <h2>Amplifying Our Story</h2>
+                <p>Premium partnerships that elevate the brand experience</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card animate-fade-up" data-delay="100">
+                    <img src="images/muletown-logo.png" alt="Muletown Coffee">
+                    <h4>Muletown Coffee</h4>
+                    <p>Exclusive roast for Gold Roast</p>
+                </div>
+                <div class="partner-card animate-fade-up" data-delay="200">
+                    <img src="images/big-green-egg-logo.png" alt="Big Green Egg">
+                    <h4>Big Green Egg</h4>
+                    <p>BBQ partnership for Char series</p>
+                </div>
+                <div class="partner-card animate-fade-up" data-delay="300">
+                    <img src="images/whisky-advocate-logo.png" alt="Whisky Advocate">
+                    <h4>Whisky Advocate</h4>
+                    <p>Primary media partner</p>
+                </div>
+                <div class="partner-card animate-fade-up" data-delay="400">
+                    <img src="images/cigar-aficionado-logo.png" alt="Cigar Aficionado">
+                    <h4>Cigar Aficionado</h4>
+                    <p>2026 redemption campaign</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Plan Visualization -->
+    <section class="media-plan section-padding dark-section" id="media">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">Media Investment</span>
+                <h2>Strategic Budget Allocation</h2>
+                <p>Maximizing impact across premium channels</p>
+            </div>
+            
+            <div class="budget-visualization">
+                <div class="budget-chart animate-fade-up">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+                
+                <div class="budget-breakdown">
+                    <div class="budget-item animate-fade-up" data-delay="100">
+                        <div class="budget-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="budget-details">
+                            <h4>Whisky Advocate</h4>
+                            <p class="budget-amount">$321,510</p>
+                            <span>Print + Digital Packages</span>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-item animate-fade-up" data-delay="200">
+                        <div class="budget-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="budget-details">
+                            <h4>Trade & Events</h4>
+                            <p class="budget-amount">$86,697</p>
+                            <span>WhiskyFest + Market Watch</span>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-item animate-fade-up" data-delay="300">
+                        <div class="budget-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="budget-details">
+                            <h4>Digital Experience</h4>
+                            <p class="budget-amount">$41,793</p>
+                            <span>Landing Page + Interactive Tools</span>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-item animate-fade-up" data-delay="400">
+                        <div class="budget-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="budget-details">
+                            <h4>Influencer Program</h4>
+                            <p class="budget-amount">$40,000</p>
+                            <span>5 Strategic Partnerships</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Features Preview -->
+    <section class="features section-padding" id="features">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <span class="section-tag">Digital Experience</span>
+                <h2>Interactive Campaign Elements</h2>
+                <p>Engaging tools that drive conversion</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-fade-up" data-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Flavor Explorer</h3>
+                    <p>Interactive coffee vs bourbon tasting wheel with personalized recommendations</p>
+                    <a href="#" class="feature-link">Preview Tool <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Char Selector</h3>
+                    <p>Quiz matching char preferences to BBQ techniques and recipes</p>
+                    <a href="#" class="feature-link">Preview Tool <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time-Based Content</h3>
+                    <p>Dynamic content delivery based on user's local time</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Experience</h3>
+                    <p>Fully responsive design optimized for on-the-go engagement</p>
+                    <a href="#" class="feature-link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content animate-fade-up">
+                <h2>Ready to Launch?</h2>
+                <p>Let's bring the dawn-to-dusk experience to life</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-large">Approve Campaign</a>
+                    <a href="#" class="btn btn-outline btn-large">Schedule Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Bib & Tucker Bourbon. Campaign Proposal.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
