@@ -70,7 +70,8 @@ h5 { font-size: 1.125rem; }
 
 p {
     margin-bottom: 1rem;
-    color: var(--smoke);
+    color: var(--charcoal);
+    font-weight: 400;
 }
 
 strong {
@@ -122,13 +123,14 @@ strong {
 }
 
 .logo-divider {
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-weight: 300;
+    opacity: 0.3;
 }
 
 .logo-partners {
-    color: var(--smoke);
-    font-weight: 400;
+    color: var(--charcoal);
+    font-weight: 500;
     font-size: 0.85rem;
     letter-spacing: 0.03em;
 }
@@ -142,8 +144,8 @@ strong {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--smoke);
-    font-weight: 500;
+    color: var(--charcoal);
+    font-weight: 600;
     font-size: 0.95rem;
     transition: var(--transition);
     position: relative;
@@ -232,10 +234,11 @@ strong {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--smoke);
-    font-weight: 300;
+    color: var(--bourbon-brown);
+    font-weight: 400;
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
+    opacity: 0.8;
 }
 
 .hero-partners {
@@ -278,12 +281,12 @@ strong {
 .stat {
     text-align: center;
     padding: var(--spacing-md);
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     transition: var(--transition);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border: 1px solid rgba(61,35,20,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(61,35,20,0.15);
 }
 
 .stat:hover {
@@ -301,11 +304,12 @@ strong {
 }
 
 .stat-label {
-    color: var(--charcoal);
+    color: var(--bourbon-brown);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: 700;
+    opacity: 0.8;
 }
 
 .hero-bottom {
@@ -318,10 +322,11 @@ strong {
 
 .hero-tagline {
     font-size: 0.85rem;
-    color: var(--charcoal);
+    color: var(--bourbon-brown);
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-weight: 600;
+    font-weight: 700;
+    opacity: 0.8;
 }
 
 .media-logos {
@@ -350,9 +355,10 @@ strong {
 
 .section-subtitle {
     font-size: 1.25rem;
-    color: var(--aged-gold);
-    font-weight: 300;
+    color: var(--bourbon-brown);
+    font-weight: 400;
     margin-top: 0.5rem;
+    opacity: 0.7;
 }
 
 .white-text h2,
@@ -361,7 +367,8 @@ strong {
 }
 
 .white-text .section-subtitle {
-    color: var(--aged-gold);
+    color: var(--warm-amber);
+    opacity: 1;
 }
 
 /* Opportunity Section */
@@ -380,7 +387,8 @@ strong {
     font-size: 1.25rem;
     line-height: 1.8;
     color: var(--bourbon-brown);
-    font-weight: 300;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .ecosystem-visual {
@@ -442,14 +450,17 @@ strong {
 }
 
 .ecosystem-card h4 {
-    color: var(--aged-gold);
-    font-weight: 400;
+    color: var(--bourbon-brown);
+    font-weight: 600;
     font-size: 1.1rem;
+    opacity: 0.8;
 }
 
 .ecosystem-card p {
     flex-grow: 1;
     margin-bottom: var(--spacing-md);
+    color: var(--charcoal);
+    font-weight: 500;
 }
 
 .card-tactics {
@@ -472,8 +483,9 @@ strong {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .card-tactics li::before {
@@ -525,9 +537,10 @@ strong {
 .benefit-source {
     display: block;
     font-size: 0.85rem;
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-style: italic;
     margin-top: 0.5rem;
+    opacity: 0.6;
 }
 
 /* Campaign Section */
@@ -580,6 +593,7 @@ strong {
 .pillar p {
     margin-bottom: var(--spacing-sm);
     font-weight: 500;
+    color: var(--charcoal);
 }
 
 .pillar ul {
@@ -590,8 +604,9 @@ strong {
     padding: 0.25rem 0;
     padding-left: 1.25rem;
     position: relative;
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .pillar li::before {
@@ -643,6 +658,7 @@ strong {
 .deliverable p {
     color: var(--warm-amber);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /* Products Section */
@@ -720,16 +736,19 @@ strong {
 }
 
 .product-partner {
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-size: 1.1rem;
     margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    opacity: 0.8;
 }
 
 .product-tagline {
-    color: var(--smoke);
+    color: var(--charcoal);
     margin-bottom: var(--spacing-md);
     font-size: 1.05rem;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .product-campaign {
@@ -751,8 +770,9 @@ strong {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .product-campaign li::before {
@@ -791,12 +811,13 @@ strong {
 }
 
 .investment-period {
-    color: var(--charcoal);
+    color: var(--bourbon-brown);
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 0.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    opacity: 0.8;
 }
 
 .investment-grid {
@@ -857,8 +878,9 @@ strong {
 
 .line-item .detail {
     font-size: 0.9rem;
-    color: var(--smoke);
-    font-weight: 400;
+    color: var(--charcoal);
+    font-weight: 500;
+    opacity: 0.8;
 }
 
 .roi-section {
@@ -896,18 +918,20 @@ strong {
 }
 
 .metric-label {
-    font-weight: 600;
-    color: var(--charcoal);
+    font-weight: 700;
+    color: var(--bourbon-brown);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-size: 0.9rem;
     margin: 0.5rem 0;
+    opacity: 0.8;
 }
 
 .metric-detail {
     font-size: 0.85rem;
-    color: var(--smoke);
+    color: var(--charcoal);
     font-style: italic;
+    font-weight: 500;
 }
 
 /* Timeline Section */
@@ -978,12 +1002,14 @@ strong {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .timeline-phase.featured li {
-    color: var(--warm-amber);
+    color: var(--white);
+    opacity: 0.9;
 }
 
 .timeline-phase li::before {
@@ -994,12 +1020,17 @@ strong {
 }
 
 .timeline-callout {
-    background: var(--cream);
+    background: var(--bourbon-brown);
     padding: var(--spacing-md);
     border-radius: 8px;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+}
+
+.timeline-callout p {
+    color: var(--white);
+    font-weight: 500;
 }
 
 /* Redemption Section */
@@ -1036,10 +1067,12 @@ strong {
 
 .redemption-lead {
     font-size: 1.25rem;
-    color: var(--warm-amber);
+    color: var(--white);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .sponsorship-features {
@@ -1074,7 +1107,9 @@ strong {
 }
 
 .feature-card p {
-    color: var(--warm-amber);
+    color: var(--white);
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .pairing-opportunity {
@@ -1091,10 +1126,12 @@ strong {
 }
 
 .pairing-opportunity > p {
-    color: var(--warm-amber);
+    color: var(--white);
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .pairing-stats {
@@ -1119,11 +1156,21 @@ strong {
 }
 
 .stat-label {
+    color: var(--bourbon-brown);
     font-size: 0.9rem;
-    color: var(--warm-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.pairing-stat .stat-label {
+    font-size: 0.9rem;
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: 0.5rem;
+    font-weight: 700;
 }
 
 .redemption-benefits {
@@ -1152,7 +1199,9 @@ strong {
 }
 
 .benefit-item p {
-    color: var(--warm-amber);
+    color: var(--white);
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 /* Contact Section */
@@ -1182,14 +1231,16 @@ strong {
 }
 
 .contact-info p {
-    color: var(--smoke);
+    color: var(--charcoal);
     margin-bottom: var(--spacing-sm);
+    font-weight: 500;
 }
 
 .contact-details {
     display: flex;
     gap: var(--spacing-sm);
-    color: var(--charcoal);
+    color: var(--bourbon-brown);
+    font-weight: 500;
 }
 
 .contact-details strong {
@@ -1198,8 +1249,9 @@ strong {
 }
 
 .divider {
-    color: var(--smoke);
+    color: var(--charcoal);
     margin: 0 var(--spacing-sm);
+    opacity: 0.3;
 }
 
 .footer-logos {
@@ -1228,9 +1280,10 @@ strong {
 }
 
 .footer p {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
     margin: 0;
+    font-weight: 400;
 }
 
 /* Mobile Menu Button */
