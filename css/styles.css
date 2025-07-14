@@ -635,8 +635,9 @@ strong {
 }
 
 .deliverable h4 {
-    color: var(--aged-gold);
+    color: var(--white);
     margin-bottom: var(--spacing-sm);
+    font-weight: 700;
 }
 
 .deliverable p {
@@ -891,6 +892,7 @@ strong {
     color: var(--bourbon-brown);
     font-weight: 700;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .metric-label {
