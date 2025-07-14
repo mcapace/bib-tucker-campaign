@@ -211,8 +211,8 @@ strong {
 
 .hero-badge {
     display: inline-block;
-    background: var(--aged-gold);
-    color: var(--bourbon-brown);
+    background: var(--bourbon-brown);
+    color: var(--white);
     padding: 0.5rem 1.5rem;
     font-size: 0.85rem;
     font-weight: 700;
@@ -227,6 +227,7 @@ strong {
     margin-bottom: var(--spacing-sm);
     font-weight: 900;
     letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .hero-subtitle {
@@ -260,9 +261,10 @@ strong {
 }
 
 .partner-divider {
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-size: 1.5rem;
     font-weight: 300;
+    opacity: 0.5;
 }
 
 .hero-stats {
@@ -276,10 +278,12 @@ strong {
 .stat {
     text-align: center;
     padding: var(--spacing-md);
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(61,35,20,0.1);
 }
 
 .stat:hover {
@@ -290,13 +294,14 @@ strong {
 .stat-number {
     font-size: 2.5rem;
     font-family: var(--font-display);
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-weight: 700;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .stat-label {
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -313,7 +318,7 @@ strong {
 
 .hero-tagline {
     font-size: 0.85rem;
-    color: var(--smoke);
+    color: var(--charcoal);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 600;
@@ -555,8 +560,8 @@ strong {
     position: absolute;
     top: -20px;
     left: 20px;
-    background: var(--aged-gold);
-    color: var(--bourbon-brown);
+    background: var(--bourbon-brown);
+    color: var(--white);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -691,8 +696,8 @@ strong {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: var(--aged-gold);
-    color: var(--bourbon-brown);
+    background: var(--bourbon-brown);
+    color: var(--white);
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
     font-weight: 700;
@@ -778,17 +783,19 @@ strong {
 .investment-amount {
     font-size: 4rem;
     font-family: var(--font-display);
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-weight: 700;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .investment-period {
-    color: var(--smoke);
+    color: var(--charcoal);
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 0.5rem;
+    font-weight: 600;
 }
 
 .investment-grid {
@@ -822,8 +829,8 @@ strong {
 
 .block-amount {
     font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--aged-gold);
+    font-weight: 700;
+    color: var(--white);
 }
 
 .block-details {
@@ -881,7 +888,7 @@ strong {
 .metric-number {
     font-size: 3rem;
     font-family: var(--font-display);
-    color: var(--aged-gold);
+    color: var(--bourbon-brown);
     font-weight: 700;
     line-height: 1;
 }
@@ -935,8 +942,8 @@ strong {
 
 .phase-date {
     display: inline-block;
-    background: var(--aged-gold);
-    color: var(--bourbon-brown);
+    background: var(--bourbon-brown);
+    color: var(--white);
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
     font-weight: 700;
@@ -1007,7 +1014,7 @@ strong {
 
 .redemption-badge {
     display: inline-block;
-    background: var(--aged-gold);
+    background: var(--white);
     color: var(--bourbon-brown);
     padding: 0.5rem 1.5rem;
     font-size: 0.85rem;
@@ -1020,9 +1027,9 @@ strong {
 
 .redemption-hero h3 {
     font-size: 3rem;
-    color: var(--white);
+    color: var(--aged-gold);
     margin-bottom: var(--spacing-sm);
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .redemption-lead {
@@ -1106,6 +1113,7 @@ strong {
     color: var(--aged-gold);
     font-weight: 700;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .stat-label {
