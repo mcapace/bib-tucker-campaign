@@ -1,5 +1,6 @@
 // ===========================
 // ELEGANT BIB & TUCKER CAMPAIGN
+// Enhanced JavaScript
 // ===========================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,12 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                const navMenu = document.querySelector('.nav-menu');
+                if (navMenu.classList.contains('mobile-active')) {
+                    navMenu.classList.remove('mobile-active');
+                }
             }
         });
     });
 
     // ===========================
-    // NAVBAR SCROLL EFFECT
+    // NAVBAR ENHANCEMENTS
     // ===========================
     const navbar = document.getElementById('navbar');
     let lastScroll = 0;
@@ -35,18 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
-        // Add shadow on scroll
+        // Add shadow and background on scroll
         if (currentScroll > 50) {
             navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         } else {
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         }
         
         lastScroll = currentScroll;
     });
 
     // ===========================
-    // INTERSECTION OBSERVER FOR ANIMATIONS
+    // INTERSECTION OBSERVER
     // ===========================
     const observerOptions = {
         threshold: 0.1,
@@ -71,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    // Observe all sections
+    // Observe sections
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -80,9 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
     
-    // Observe cards and grid items
+    // Observe cards and elements
     const animateElements = document.querySelectorAll(
-        '.ecosystem-card, .product-card, .investment-category, .timeline-item, .benefit, .benefit-card, .mechanic, .importance-item'
+        '.ecosystem-card, .product-card, .investment-block, .timeline-phase, ' +
+        '.benefit-card, .feature-card, .pillar, .deliverable, .benefit-item'
     );
     animateElements.forEach(element => {
         element.classList.add('animate-child');
@@ -94,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================
     // COUNTER ANIMATION
     // ===========================
-    const animateCounter = (element, target, duration = 2000) => {
+    const animateCounter = (element, target, duration = 2000, suffix = '') => {
         const start = 0;
         const increment = target / (duration / 16);
         let current = start;
@@ -102,13 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                element.textContent = element.textContent.includes('$') 
-                    ? '$' + Math.floor(current).toLocaleString()
-                    : element.textContent.includes('M')
-                    ? Math.floor(current) + 'M+'
-                    : element.textContent.includes('%')
-                    ? Math.floor(current) + '%'
-                    : Math.floor(current).toLocaleString();
+                if (suffix === '$') {
+                    element.textContent = '$' + Math.floor(current).toLocaleString();
+                } else if (suffix === 'M+') {
+                    element.textContent = Math.floor(current) + 'M+';
+                } else if (suffix === '%') {
+                    element.textContent = Math.floor(current) + '%';
+                } else if (suffix === 'K') {
+                    element.textContent = '$' + Math.floor(current) + 'K';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
                 requestAnimationFrame(updateCounter);
             } else {
                 element.textContent = element.getAttribute('data-target');
@@ -118,8 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCounter();
     };
     
-    // Observe stat numbers
-    const statNumbers = document.querySelectorAll('.stat h3, .metric-value');
+    // Observe numbers
+    const statNumbers = document.querySelectorAll(
+        '.stat-number, .metric-number, .investment-amount, .stat-big'
+    );
     const numberObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.animated) {
@@ -127,10 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 const text = entry.target.textContent;
                 entry.target.setAttribute('data-target', text);
                 
-                // Extract number from text
-                const number = parseInt(text.replace(/[^0-9]/g, ''));
+                // Extract number and suffix
+                let number = parseInt(text.replace(/[^0-9]/g, ''));
+                let suffix = '';
+                
+                if (text.includes('$') && text.includes('K')) {
+                    suffix = 'K';
+                } else if (text.includes('$')) {
+                    suffix = '$';
+                } else if (text.includes('M+')) {
+                    suffix = 'M+';
+                } else if (text.includes('%')) {
+                    suffix = '%';
+                }
+                
                 if (!isNaN(number)) {
-                    animateCounter(entry.target, number);
+                    animateCounter(entry.target, number, 2000, suffix);
                 }
             }
         });
@@ -139,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     statNumbers.forEach(stat => numberObserver.observe(stat));
 
     // ===========================
-    // PARALLAX EFFECT FOR HERO
+    // PARALLAX EFFECT
     // ===========================
     const hero = document.querySelector('.hero');
     const heroContent = document.querySelector('.hero-content');
@@ -148,84 +176,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrolled = window.pageYOffset;
         const parallaxSpeed = 0.5;
         
-        if (scrolled < window.innerHeight) {
+        if (scrolled < window.innerHeight && heroContent) {
             heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-            heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+            heroContent.style.opacity = 1 - (scrolled / (window.innerHeight * 1.5));
         }
     });
 
     // ===========================
-    // HOVER EFFECTS FOR CARDS
+    // HOVER EFFECTS
     // ===========================
-    const cards = document.querySelectorAll('.product-card, .ecosystem-card, .investment-category, .benefit-card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('benefit-card')) {
-                this.style.transform = 'translateY(-10px)';
-            }
+    const addHoverEffect = (selector, scale = 1.02) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                this.style.transform = `scale(${scale})`;
+            });
+            el.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
         });
-        
-        card.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('benefit-card')) {
-                this.style.transform = 'translateY(0)';
-            }
-        });
-    });
-
-    // ===========================
-    // TIME-BASED CONTENT HINT
-    // ===========================
-    const updateTimeBasedContent = () => {
-        const hour = new Date().getHours();
-        const heroBackground = document.querySelector('.hero');
-        
-        if (hour >= 6 && hour < 12) {
-            // Morning theme
-            heroBackground.style.background = 'linear-gradient(135deg, #FAF8F3 0%, #FFE4B5 100%)';
-        } else if (hour >= 12 && hour < 17) {
-            // Afternoon theme
-            heroBackground.style.background = 'linear-gradient(135deg, #FAF8F3 0%, #FFDAB9 100%)';
-        } else {
-            // Evening theme
-            heroBackground.style.background = 'linear-gradient(135deg, #FAF8F3 0%, #E8D5B7 100%)';
-        }
     };
     
-    updateTimeBasedContent();
+    addHoverEffect('.stat', 1.05);
+    addHoverEffect('.partner-logo', 1.1);
 
     // ===========================
-    // SMOOTH REVEAL FOR TIMELINE
+    // ACTIVE NAVIGATION
     // ===========================
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateX(0)';
-                }, index * 200);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    timelineItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-30px)';
-        item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        timelineObserver.observe(item);
-    });
-
-    // ===========================
-    // ACTIVE NAVIGATION HIGHLIGHTING
-    // ===========================
-    const sections2 = document.querySelectorAll('section[id]');
+    const navSections = document.querySelectorAll('section[id]');
     const navItems = document.querySelectorAll('.nav-menu a');
     
     window.addEventListener('scroll', () => {
         let current = '';
         
-        sections2.forEach(section => {
+        navSections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
@@ -243,35 +227,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===========================
-    // MOBILE MENU TOGGLE (if needed)
+    // MOBILE MENU
     // ===========================
     const createMobileMenu = () => {
         const navContainer = document.querySelector('.nav-container');
-        const menuButton = document.createElement('button');
-        menuButton.className = 'mobile-menu-toggle';
-        menuButton.innerHTML = '<span></span><span></span><span></span>';
-        menuButton.style.display = window.innerWidth <= 768 ? 'block' : 'none';
+        const navMenu = document.querySelector('.nav-menu');
         
-        navContainer.appendChild(menuButton);
-        
-        menuButton.addEventListener('click', () => {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('mobile-active');
-        });
+        if (window.innerWidth <= 768 && !document.querySelector('.mobile-menu-toggle')) {
+            const menuButton = document.createElement('button');
+            menuButton.className = 'mobile-menu-toggle';
+            menuButton.innerHTML = '<span></span><span></span><span></span>';
+            
+            navContainer.appendChild(menuButton);
+            
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('mobile-active');
+                menuButton.classList.toggle('active');
+            });
+        }
     };
     
-    // Check if mobile menu is needed
-    if (window.innerWidth <= 768) {
-        createMobileMenu();
-    }
+    createMobileMenu();
     
     // Handle resize
     window.addEventListener('resize', () => {
+        createMobileMenu();
+        
         const menuButton = document.querySelector('.mobile-menu-toggle');
-        if (menuButton) {
-            menuButton.style.display = window.innerWidth <= 768 ? 'block' : 'none';
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (window.innerWidth > 768) {
+            if (menuButton) menuButton.style.display = 'none';
+            navMenu.classList.remove('mobile-active');
+        } else {
+            if (menuButton) menuButton.style.display = 'flex';
         }
     });
+
+    // ===========================
+    // TIME-BASED CONTENT
+    // ===========================
+    const updateTimeBasedContent = () => {
+        const hour = new Date().getHours();
+        const heroOverlay = document.querySelector('.hero-overlay');
+        
+        if (hour >= 6 && hour < 12) {
+            // Morning
+            if (heroOverlay) {
+                heroOverlay.style.background = 'radial-gradient(circle at center, transparent 0%, rgba(255,215,0,0.1) 100%)';
+            }
+        } else if (hour >= 12 && hour < 17) {
+            // Afternoon
+            if (heroOverlay) {
+                heroOverlay.style.background = 'radial-gradient(circle at center, transparent 0%, rgba(255,140,0,0.1) 100%)';
+            }
+        } else {
+            // Evening
+            if (heroOverlay) {
+                heroOverlay.style.background = 'radial-gradient(circle at center, transparent 0%, rgba(139,0,0,0.1) 100%)';
+            }
+        }
+    };
+    
+    updateTimeBasedContent();
 
     // ===========================
     // PRINT FUNCTIONALITY
@@ -340,5 +358,28 @@ document.addEventListener('DOMContentLoaded', () => {
         imageObserver.observe(img);
     });
 
-    console.log('Bib & Tucker Campaign site initialized successfully!');
+    // ===========================
+    // SMOOTH REVEAL ANIMATIONS
+    // ===========================
+    const revealElements = document.querySelectorAll(
+        '.pillar-number, .phase-date, .product-badge, .redemption-badge'
+    );
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.transform = 'scale(1) rotate(0deg)';
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'scale(0.8) rotate(-10deg)';
+        el.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        revealObserver.observe(el);
+    });
+
+    console.log('Bib & Tucker Campaign - Enhanced Experience Loaded');
 });
