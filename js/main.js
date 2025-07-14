@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Observe cards and grid items
     const animateElements = document.querySelectorAll(
-        '.ecosystem-card, .product-card, .investment-category, .timeline-item, .benefit'
+        '.ecosystem-card, .product-card, .investment-category, .timeline-item, .benefit, .benefit-card, .mechanic, .importance-item'
     );
     animateElements.forEach(element => {
         element.classList.add('animate-child');
@@ -157,15 +157,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================
     // HOVER EFFECTS FOR CARDS
     // ===========================
-    const cards = document.querySelectorAll('.product-card, .ecosystem-card, .investment-category');
+    const cards = document.querySelectorAll('.product-card, .ecosystem-card, .investment-category, .benefit-card');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
+            if (!this.classList.contains('benefit-card')) {
+                this.style.transform = 'translateY(-10px)';
+            }
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+            if (!this.classList.contains('benefit-card')) {
+                this.style.transform = 'translateY(0)';
+            }
         });
     });
 
