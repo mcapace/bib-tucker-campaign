@@ -5,7 +5,1916 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bib & Tucker Bourbon | From Dawn to Dusk Campaign Proposal</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+/* ===========================
+   ELEGANT BIB & TUCKER CAMPAIGN
+   Enhanced with Perfect Symmetry
+   =========================== */
+
+/* CSS Variables */
+:root {
+    /* Refined Color Palette */
+    --bourbon-brown: #3D2314;
+    --aged-gold: #C9A961;
+    --warm-amber: #E8D5B7;
+    --charcoal: #1A1A1A;
+    --smoke: #4A4A4A;
+    --cream: #FAF8F3;
+    --white: #FFFFFF;
+    --accent-red: #8B0000;
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    --spacing-xxl: 8rem;
+    
+    /* Container */
+    --container-max: 1400px;
+    
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--bourbon-brown);
+}
+
+h1 { font-size: clamp(3rem, 6vw, 5rem); }
+h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h5 { font-size: 1.125rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+/* Container */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--bourbon-brown);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+.logo-divider {
+    color: var(--bourbon-brown);
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+.logo-partners {
+    color: var(--charcoal);
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--bourbon-brown);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--aged-gold);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-cta {
+    background: var(--bourbon-brown);
+    color: var(--white) !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+}
+
+.nav-cta:hover {
+    background: var(--aged-gold);
+    color: var(--bourbon-brown) !important;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+    background: linear-gradient(135deg, #FAF8F3 0%, #E8D5B7 50%, #C9A961 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    padding: var(--spacing-xl) var(--spacing-md);
+    max-width: 1200px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    border-radius: 30px;
+}
+
+.hero-title {
+    color: var(--bourbon-brown);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--bourbon-brown);
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm);
+    opacity: 0.8;
+}
+
+.hero-dynamic {
+    font-size: 1.1rem;
+    color: var(--aged-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 auto var(--spacing-lg);
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    border: 2px solid var(--aged-gold);
+    border-radius: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.hero-partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.partner-logo {
+    height: 60px;
+    width: auto;
+    filter: grayscale(100%) brightness(0.8);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.partner-logo.featured {
+    height: 80px;
+    filter: none;
+    opacity: 1;
+}
+
+.partner-divider {
+    color: var(--bourbon-brown);
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.stat {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(61,35,20,0.15);
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.8);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-family: var(--font-display);
+    color: var(--bourbon-brown);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    color: var(--bourbon-brown);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.hero-bottom {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.hero-tagline {
+    font-size: 0.85rem;
+    color: var(--bourbon-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.media-logos {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.media-logo {
+    height: 30px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: var(--transition);
+}
+
+.media-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--bourbon-brown);
+    font-weight: 400;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+.white-text h2,
+.white-text .section-subtitle {
+    color: var(--white);
+}
+
+.white-text .section-subtitle {
+    color: var(--warm-amber);
+    opacity: 1;
+}
+
+/* Opportunity Section */
+.opportunity {
+    padding: var(--spacing-xxl) 0;
+    background: var(--cream);
+}
+
+.opportunity-lead {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.opportunity-lead p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--bourbon-brown);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.ecosystem-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.ecosystem-card {
+    background: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg); /* Reduced top padding */
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.ecosystem-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--aged-gold);
+}
+
+.ecosystem-card.morning::before { background: linear-gradient(90deg, #FFD700, #FFA500); }
+.ecosystem-card.afternoon::before { background: linear-gradient(90deg, #FFA500, #FF6347); }
+.ecosystem-card.evening::before { background: linear-gradient(90deg, #FF6347, #8B0000); }
+
+.card-header {
+    margin-bottom: var(--spacing-xs); /* Reduced from spacing-sm */
+}
+
+.time-badge {
+    display: inline-block;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    margin-bottom: var(--spacing-xs); /* Reduced from spacing-sm */
+    font-weight: 600;
+}
+
+.ecosystem-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.ecosystem-card h4 {
+    color: var(--bourbon-brown);
+    font-weight: 600;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.ecosystem-card p {
+    flex-grow: 1;
+    margin-bottom: var(--spacing-sm); /* Reduced from spacing-md */
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+.ecosystem-card p strong {
+    color: var(--bourbon-brown);
+    font-weight: 700;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.card-tactics {
+    margin-top: auto;
+}
+
+.card-tactics h5 {
+    color: var(--bourbon-brown);
+    margin-bottom: var(--spacing-xs); /* Reduced from spacing-sm */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}
+
+.card-tactics ul {
+    list-style: none;
+}
+
+.card-tactics li {
+    padding: 0.25rem 0; /* Reduced from 0.5rem */
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-tactics li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+
+.campaign-benefits {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.campaign-benefits h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.benefit-card {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--cream);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-source {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--bourbon-brown);
+    font-style: italic;
+    margin-top: 0.5rem;
+    opacity: 0.6;
+}
+
+/* Campaign Section */
+.campaign {
+    padding: var(--spacing-xxl) 0;
+    background: var(--white);
+}
+
+.timing-highlight {
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.timing-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.timing-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.timing-highlight h3 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2rem;
+}
+
+.timing-highlight p {
+    color: var(--white);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.time-flow {
+    background: var(--cream);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.time-flow h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.current-time-display {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--white);
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: 0 auto var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.time-label {
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+}
+
+.current-time {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--bourbon-brown);
+    font-family: var(--font-display);
+}
+
+.time-mode {
+    background: var(--aged-gold);
+    color: var(--bourbon-brown);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.time-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.time-block {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.time-block.morning {
+    border-color: #FFD700;
+}
+
+.time-block.afternoon {
+    border-color: #FFA500;
+}
+
+.time-block.evening {
+    border-color: #8B0000;
+}
+
+.time-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.time-block.active {
+    background: var(--bourbon-brown);
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.time-block.active .time-range,
+.time-block.active h4,
+.time-block.active p,
+.time-block.active li {
+    color: var(--white);
+}
+
+.time-block.active .time-range {
+    background: var(--aged-gold);
+    color: var(--bourbon-brown);
+}
+
+.time-range {
+    display: inline-block;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.time-block h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--bourbon-brown);
+}
+
+.time-block p {
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-sm);
+}
+
+.time-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.time-block li {
+    padding: 0.25rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--charcoal);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.time-block li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+
+.time-note {
+    background: var(--aged-gold);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.time-note p {
+    color: var(--bourbon-brown);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.campaign-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.pillar {
+    background: var(--cream);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.pillar-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.pillar h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.pillar p {
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.pillar ul {
+    list-style: none;
+}
+
+.pillar li {
+    padding: 0.25rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pillar li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+
+.campaign-deliverables {
+    background: var(--charcoal);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    color: var(--white);
+}
+
+.campaign-deliverables h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.deliverable {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(201,169,97,0.3);
+    transition: var(--transition);
+}
+
+.deliverable:hover {
+    background: rgba(201,169,97,0.1);
+    transform: translateY(-5px);
+}
+
+.deliverable h4 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.deliverable p {
+    color: var(--warm-amber);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Products Section */
+.products {
+    padding: var(--spacing-xxl) 0;
+    background: var(--charcoal);
+}
+
+.products-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.product-image {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    height: 85%;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-partner {
+    color: var(--bourbon-brown);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.product-tagline {
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.product-campaign {
+    margin-top: auto;
+}
+
+.product-campaign h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.product-campaign ul {
+    list-style: none;
+}
+
+.product-campaign li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.product-campaign li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+
+/* Investment Section */
+.investment {
+    padding: var(--spacing-xxl) 0;
+    background: var(--cream);
+}
+
+.investment-overview {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.total-investment {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.investment-amount {
+    font-size: 4rem;
+    font-family: var(--font-display);
+    color: var(--bourbon-brown);
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.investment-period {
+    color: var(--bourbon-brown);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.investment-block {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.block-header {
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-header h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.block-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.block-details {
+    padding: var(--spacing-md);
+}
+
+.line-item {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.line-item:last-child {
+    border-bottom: none;
+}
+
+.line-item span:first-child {
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.25rem;
+}
+
+.line-item .detail {
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.roi-section {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.roi-section h3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.roi-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.roi-metric {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--cream);
+    border-radius: 8px;
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-family: var(--font-display);
+    color: var(--bourbon-brown);
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metric-label {
+    font-weight: 700;
+    color: var(--bourbon-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+.metric-detail {
+    font-size: 0.85rem;
+    color: var(--charcoal);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Timeline Section */
+.timeline {
+    padding: var(--spacing-xxl) 0;
+    background: var(--white);
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline-phase {
+    background: var(--cream);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    position: relative;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.timeline-phase:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.timeline-phase.featured {
+    background: var(--bourbon-brown);
+    color: var(--white);
+}
+
+.phase-date {
+    display: inline-block;
+    background: var(--bourbon-brown);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+    border-radius: 4px;
+}
+
+.timeline-phase.featured .phase-date {
+    background: var(--aged-gold);
+    color: var(--bourbon-brown);
+}
+
+.timeline-phase h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.timeline-phase.featured h3 {
+    color: var(--white);
+}
+
+.timeline-phase ul {
+    list-style: none;
+    text-align: left;
+}
+
+.timeline-phase li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.timeline-phase.featured li {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.timeline-phase li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+
+/* Updated Timeline Callout for better readability */
+.timeline-callout {
+    background: var(--bourbon-brown);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid var(--aged-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-callout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201,169,97,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.timeline-callout h3 {
+    color: var(--aged-gold) !important;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.timeline-callout p {
+    color: var(--white) !important;
+    font-weight: 400;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-callout p strong {
+    color: var(--aged-gold) !important;
+    font-weight: 700;
+}
+
+.timeline-callout p:last-child {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Redemption Section */
+.redemption {
+    padding: var(--spacing-xxl) 0;
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+.redemption-hero {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.redemption-badge {
+    display: inline-block;
+    background: var(--white);
+    color: var(--bourbon-brown);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    border-radius: 4px;
+}
+
+.redemption-hero h3 {
+    font-size: 3rem;
+    color: var(--aged-gold);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.redemption-lead {
+    font-size: 1.25rem;
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.sponsorship-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.05);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    border: 1px solid rgba(201,169,97,0.3);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    background: rgba(201,169,97,0.1);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-card h4 {
+    color: var(--aged-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-card p {
+    color: var(--white);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.pairing-opportunity {
+    background: rgba(255,255,255,0.03);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.pairing-opportunity h3 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.pairing-opportunity > p {
+    color: var(--white);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.pairing-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.pairing-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-big {
+    font-size: 3rem;
+    font-family: var(--font-display);
+    color: var(--aged-gold);
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    color: var(--bourbon-brown);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.pairing-stat .stat-label {
+    font-size: 0.9rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+.redemption-benefits {
+    margin-top: var(--spacing-xl);
+}
+
+.redemption-benefits h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.benefits-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.benefit-item {
+    text-align: center;
+}
+
+.benefit-item h4 {
+    color: var(--aged-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-item p {
+    color: var(--white);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Contact Section Logo Fix */
+.contact {
+    padding: var(--spacing-lg) 0;
+    background: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details {
+    font-size: 1rem;
+}
+
+.contact-details strong {
+    color: var(--aged-gold);
+    margin-right: 0.5rem;
+}
+
+.divider {
+    color: var(--charcoal);
+    margin: 0 var(--spacing-sm);
+    opacity: 0.3;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-logos img {
+    height: 40px !important;
+    width: auto !important;
+    object-fit: contain;
+    opacity: 0.8;
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+.footer-logos img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Alternative: Text logos */
+.footer-logos-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--charcoal);
+    font-weight: 600;
+}
+
+.footer-logos-text span {
+    opacity: 0.8;
+}
+
+.footer-logos-text .logo-separator {
+    opacity: 0.4;
+}
+
+/* Footer */
+.footer {
+    background: var(--charcoal);
+    padding: var(--spacing-md) 0;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.footer p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--bourbon-brown);
+    transition: var(--transition);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .campaign-pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .ecosystem-visual,
+    .products-showcase,
+    .sponsorship-features,
+    .benefits-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .investment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .deliverables-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .time-blocks {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    .nav-menu.mobile-active {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-partners {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .benefits-grid,
+    .roi-metrics,
+    .pairing-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-grid,
+    .campaign-pillars,
+    .deliverables-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .divider {
+        display: none;
+    }
+    
+    .example-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .daypart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tool-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-logos {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-logos img {
+        height: 30px !important;
+    }
+    
+    .footer-logos {
+        gap: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .hero {
+        min-height: auto;
+        page-break-after: always;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===========================
+   ADDITIONAL SPACING FIXES
+   =========================== */
+
+/* Fix extra space in opportunity section */
+.opportunity-lead {
+    margin: 0 auto 3rem !important; /* Reduced from 5rem */
+}
+
+/* Fix spacing in ecosystem cards */
+.ecosystem-card p {
+    margin-bottom: 1rem !important; /* Reduced from 2rem */
+}
+
+.card-tactics {
+    margin-top: 1rem !important; /* Reduced spacing */
+}
+
+/* Fix the brown/featured timeline phase styling */
+.timeline-phase.featured {
+    background: var(--bourbon-brown);
+    color: var(--white);
+}
+
+.timeline-phase.featured strong,
+.timeline-phase.featured span {
+    color: var(--white) !important;
+}
+
+/* Ensure all text in the featured phase is white */
+.timeline-phase.featured div[style] strong,
+.timeline-phase.featured div[style] span {
+    color: white !important;
+}
+
+/* Media logos at top of hero section */
+.hero-content .media-logos {
+    margin-bottom: 2rem;
+}
+
+/* ===========================
+   LOGO AND SPACING CSS FIXES
+   =========================== */
+
+/* Nav logo styling */
+.nav-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hero media logos - make them bigger and centered */
+.hero-content .media-logos {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-content .media-logo {
+    height: 45px !important; /* Increased from 30px */
+    opacity: 0.8;
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+.hero-content .media-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Partner logos adjustment */
+.hero-partners {
+    margin-bottom: 2rem !important; /* Reduced spacing */
+}
+
+.hero-partners .partner-logo {
+    height: 70px; /* Standardized height */
+    filter: none;
+    opacity: 1;
+}
+
+/* Reduce white space in opportunity section */
+.opportunity {
+    padding: 5rem 0 !important; /* Reduced from 8rem */
+}
+
+.section-header {
+    margin-bottom: 3rem !important; /* Reduced from 5rem */
+}
+
+.opportunity-lead {
+    margin: 0 auto 2rem !important; /* Further reduced spacing */
+}
+
+/* Adjust hero spacing */
+.hero-content {
+    padding: 3rem 2rem !important; /* Reduced vertical padding */
+}
+
+.hero-badge {
+    margin-bottom: 1.5rem !important; /* Reduced spacing */
+}
+
+.hero-title {
+    margin-bottom: 0.75rem !important; /* Reduced spacing */
+}
+
+.hero-subtitle {
+    margin-bottom: 2rem !important; /* Reduced spacing */
+}
+
+/* Fix hero stats margin */
+.hero-stats {
+    margin: 0 auto 2rem !important; /* Reduced spacing */
+}
+
+/* Campaign Digital Amplification specific styles */
+.amplification-section {
+    background: var(--charcoal);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    color: var(--white);
+    margin-bottom: var(--spacing-xl);
+}
+
+.amplification-section h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.amplification-category {
+    margin-bottom: var(--spacing-lg);
+}
+
+.amplification-category:last-child {
+    margin-bottom: 0;
+}
+
+.amplification-category h4 {
+    color: var(--aged-gold);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.amplification-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amplification-category li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--white);
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.amplification-category li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--aged-gold);
+}
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -266,7 +2175,6 @@
                         <div class="product-campaign">
                             <h4>Campaign Focus:</h4>
                             <ul>
-                                <li>September/October launch window</li>
                                 <li>Coffee influencer partnerships</li>
                                 <li>Morning ritual content series</li>
                                 <li>Whisky Advocate Fall spread</li>
@@ -313,7 +2221,6 @@
                                 <li>Year-round grilling advocacy</li>
                                 <li>Premium entertaining content</li>
                                 <li>Gift guide positioning</li>
-                                <li>Cigar pairing education</li>
                             </ul>
                         </div>
                     </div>
@@ -346,7 +2253,7 @@
                     </div>
                     <div class="block-details">
                         <div class="line-item">
-                            <span>September/October Cigar Aficionado</span>
+                            <span>September/October Cigar Aficionado (Spirits feature) Full page</span>
                             <span class="detail">Spirits Feature</span>
                         </div>
                         <div class="line-item">
@@ -464,12 +2371,13 @@
                 </div>
                 
                 <div class="timeline-phase featured">
-                    <div class="phase-date">SEPTEMBER-OCTOBER 2025</div>
+                    <div class="phase-date">SEPTEMBER-DECEMBER 2025</div>
                     <h3>Full Ecosystem Launch</h3>
                     <ul>
                         <li>All products launch (Gold Roast, Double Char, Classic 6)</li>
                         <li>24/7 day-parting activation begins</li>
                         <li>Big Green Egg partnership activates</li>
+                        <li>September Market Watch Sponsored Content</li>
                         <li>Fall Whisky Advocate spread</li>
                         <li>Cigar Aficionado spirits feature</li>
                     </ul>
@@ -482,20 +2390,16 @@
                 </div>
                 
                 <div class="timeline-phase">
-                    <div class="phase-date">NOVEMBER-DECEMBER 2025</div>
-                    <h3>Holiday Amplification</h3>
+                    <div class="phase-date">ONGOING</div>
+                    <h3>Campaign Digital Amplification</h3>
                     <ul>
-                        <li>Holiday grilling push with Double Char & Classic 6</li>
-                        <li>Enhanced Big Green Egg content</li>
-                        <li>Gift guide integration</li>
-                        <li>Winter Whisky Advocate placement</li>
+                        <li><strong>Email Journeys:</strong> 12 automated, day-parted emails (4 per expression)</li>
+                        <li><strong>Dedicated Newsletters:</strong> Monthly "Dawn to Dusk Digest": UGC spotlights, tool tips, exclusive recipes</li>
+                        <li><strong>Social (Organic + Paid):</strong> Platform mix: Instagram and Facebook. Day-part-targeted Stories/Reels; #DawnToDusk UGC challenge with prizes</li>
+                        <li><strong>Programmatic Display & Video:</strong> Geo + contextual targeting on food, lifestyle, and grilling sites. Hourly creative swap to match day-part mood</li>
+                        <li><strong>Native Extension:</strong> 3-part sponsored series on Whisky Advocate & Cigar Aficionado. In-feed units on premium recipe and BBQ verticals</li>
+                        <li><strong>Influencer Program:</strong> Five curated ambassadors mapped to each day-part. Deliverables per creator: hero reel + feed posts + Stories + usage rights</li>
                     </ul>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-                        <strong>Day-Parting Continues 24/7:</strong>
-                        <br>• Morning: Gold Roast focus
-                        <br>• Afternoon: Gift guide prominence
-                        <br>• Evening: Holiday entertaining
-                    </div>
                 </div>
                 
                 <div class="timeline-phase">
