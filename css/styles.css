@@ -1778,3 +1778,81 @@ strong {
 .hero-content .media-logos {
     margin-bottom: 2rem;
 }
+
+/* ===========================
+   LOGO AND SPACING CSS FIXES
+   =========================== */
+
+/* Nav logo styling */
+.nav-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hero media logos - make them bigger and centered */
+.hero-content .media-logos {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-content .media-logo {
+    height: 45px !important; /* Increased from 30px */
+    opacity: 0.8;
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+.hero-content .media-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Partner logos adjustment */
+.hero-partners {
+    margin-bottom: 2rem !important; /* Reduced spacing */
+}
+
+.hero-partners .partner-logo {
+    height: 70px; /* Standardized height */
+    filter: none;
+    opacity: 1;
+}
+
+/* Reduce white space in opportunity section */
+.opportunity {
+    padding: 5rem 0 !important; /* Reduced from 8rem */
+}
+
+.section-header {
+    margin-bottom: 3rem !important; /* Reduced from 5rem */
+}
+
+.opportunity-lead {
+    margin: 0 auto 2rem !important; /* Further reduced spacing */
+}
+
+/* Adjust hero spacing */
+.hero-content {
+    padding: 3rem 2rem !important; /* Reduced vertical padding */
+}
+
+.hero-badge {
+    margin-bottom: 1.5rem !important; /* Reduced spacing */
+}
+
+.hero-title {
+    margin-bottom: 0.75rem !important; /* Reduced spacing */
+}
+
+.hero-subtitle {
+    margin-bottom: 2rem !important; /* Reduced spacing */
+}
+
+/* Fix hero stats margin */
+.hero-stats {
+    margin: 0 auto 2rem !important; /* Reduced spacing */
+}
