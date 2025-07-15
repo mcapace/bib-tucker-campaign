@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Smooth Scrolling for Navigation Links
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-menu a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(26, 26, 26, 0.98)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         } else {
-            navbar.style.background = 'rgba(26, 26, 26, 0.95)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         }
     });
     
@@ -73,8 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    updateHeroOverlay();
-    setInterval(updateHeroOverlay, 60000); // Update every minute
+    if (heroOverlay) {
+        updateHeroOverlay();
+        setInterval(updateHeroOverlay, 60000); // Update every minute
+    }
     
     // Animate Elements on Scroll
     const observerOptions = {
@@ -93,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Observe all cards and sections
     const animatedElements = document.querySelectorAll(
-        '.ecosystem-card, .extension-card, .media-card, .timeline-item, .reporting-card, .objective-card'
+        '.ecosystem-card, .benefit-card, .feature-card, .timeline-phase, .product-card, .pillar'
     );
     
     animatedElements.forEach(el => {
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (element.textContent.includes('K')) {
                 element.textContent = '$' + Math.floor(current) + 'K';
             } else if (element.textContent.includes('%')) {
-                element.textContent = '≥' + Math.floor(current) + '%';
+                element.textContent = Math.floor(current) + '%';
             } else if (element.textContent.includes('+')) {
                 element.textContent = Math.floor(current).toLocaleString() + '+';
             }
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Trigger counter animation when stats are visible
-    const statValues = document.querySelectorAll('.stat-value, .kpi-value');
+    const statNumbers = document.querySelectorAll('.stat-number, .metric-number, .stat-big');
     const statObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.animated) {
@@ -139,11 +141,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (text.includes('479K')) targetValue = 479;
                 else if (text.includes('12M+')) targetValue = 12;
-                else if (text.includes('15,000+')) targetValue = 15000;
-                else if (text.includes('25,000+')) targetValue = 25000;
-                else if (text.includes('≥15%')) targetValue = 15;
-                else if (text.includes('≥5%')) targetValue = 5;
-                else if (text.includes('1M+')) targetValue = 1;
+                else if (text.includes('87%')) targetValue = 87;
+                else if (text.includes('78%')) targetValue = 78;
+                else if (text.includes('92%')) targetValue = 92;
+                else if (text.includes('25')) targetValue = 25;
+                else if (text.includes('3M+')) targetValue = 3;
                 
                 if (targetValue > 0) {
                     animateCounter(entry.target, targetValue);
@@ -152,21 +154,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.5 });
     
-    statValues.forEach(stat => {
+    statNumbers.forEach(stat => {
         statObserver.observe(stat);
     });
     
-    // Investment Chart Hover Effects
-    const chartBars = document.querySelectorAll('.chart-bar');
-    chartBars.forEach(bar => {
-        bar.addEventListener('mouseenter', function() {
-            this.style.filter = 'brightness(1.1)';
+    // Add active state to current nav item based on scroll
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
         });
         
-        bar.addEventListener('mouseleave', function() {
-            this.style.filter = 'brightness(1)';
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
         });
     });
-    
-    // Add active state to current nav item based on scroll
-    window.addEventListener('scrol
+});
