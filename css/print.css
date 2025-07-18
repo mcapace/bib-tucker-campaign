@@ -31,8 +31,8 @@
     
     /* Base print styles */
     body {
-        font-size: 12pt !important;
-        line-height: 1.4 !important;
+        font-size: 11pt !important;
+        line-height: 1.3 !important;
         color: #000 !important;
         background: #fff !important;
         margin: 0 !important;
@@ -59,38 +59,39 @@
         color: #000 !important;
         page-break-after: avoid !important;
         page-break-inside: avoid !important;
-        margin-top: 1.5em !important;
+        margin-top: 1em !important;
         margin-bottom: 0.5em !important;
         orphans: 3 !important;
         widows: 3 !important;
     }
     
     h1 {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
         margin-top: 0 !important;
         font-weight: 300 !important;
     }
     
     h2 {
-        font-size: 20pt !important;
+        font-size: 16pt !important;
         font-weight: 300 !important;
     }
     
     h3 {
-        font-size: 16pt !important;
-        font-weight: 400 !important;
-    }
-    
-    h4 {
         font-size: 14pt !important;
         font-weight: 400 !important;
     }
     
+    h4 {
+        font-size: 12pt !important;
+        font-weight: 400 !important;
+    }
+    
     p {
-        margin-bottom: 0.8em !important;
+        margin-bottom: 0.6em !important;
         orphans: 3 !important;
         widows: 3 !important;
         color: #000 !important;
+        font-size: 10pt !important;
     }
     
     strong {
@@ -108,9 +109,10 @@
     
     section {
         page-break-inside: avoid !important;
-        margin-bottom: 2em !important;
+        margin-bottom: 1.5em !important;
         background: #fff !important;
         color: #000 !important;
+        padding: 1em 0 !important;
     }
     
     /* Hero section */
@@ -118,7 +120,7 @@
         min-height: auto !important;
         background: #fff !important;
         margin-top: 0 !important;
-        padding: 2em 0 !important;
+        padding: 1em 0 !important;
         page-break-after: always !important;
     }
     
@@ -130,11 +132,11 @@
     .hero-badge {
         background: #000 !important;
         color: #fff !important;
-        padding: 0.5em 1em !important;
+        padding: 0.3em 0.8em !important;
         border-radius: 0 !important;
         display: inline-block !important;
-        margin-bottom: 1em !important;
-        font-size: 10pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 8pt !important;
         font-weight: 400 !important;
         text-transform: uppercase !important;
     }
@@ -148,50 +150,50 @@
     .hero-subtitle {
         color: #000 !important;
         opacity: 1 !important;
-        margin-bottom: 1em !important;
-        font-size: 14pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 12pt !important;
     }
     
     .hero-innovation {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
-        margin: 1.5em 0 !important;
+        padding: 1em !important;
+        margin: 1em 0 !important;
         page-break-inside: avoid !important;
     }
     
     .innovation-description {
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
     }
     
     /* Stats section */
     .hero-stats {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1em !important;
-        margin: 1.5em 0 !important;
+        gap: 0.8em !important;
+        margin: 1em 0 !important;
         page-break-inside: avoid !important;
     }
     
     .stat {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1em !important;
+        padding: 0.8em !important;
         text-align: center !important;
     }
     
     .stat-number {
         color: #000 !important;
         text-shadow: none !important;
-        font-size: 18pt !important;
+        font-size: 16pt !important;
         font-weight: 300 !important;
     }
     
     .stat-label {
         color: #000 !important;
         opacity: 1 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         font-weight: 400 !important;
         text-transform: uppercase !important;
     }
@@ -201,7 +203,7 @@
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        margin: 1.5em 0 !important;
+        margin: 1em 0 !important;
         page-break-inside: avoid !important;
     }
     
@@ -210,31 +212,24 @@
     }
     
     .partner-logo {
-        height: 40px !important;
+        height: 60px !important;
         filter: none !important;
         opacity: 1 !important;
-    }
-    
-    .partner-name {
-        color: #000 !important;
-        font-size: 10pt !important;
-        margin-top: 0.5em !important;
-        font-weight: 400 !important;
     }
     
     /* Section headers */
     .section-header {
         text-align: left !important;
-        margin-bottom: 2em !important;
-        padding: 1em 0 !important;
-        border-bottom: 2px solid #000 !important;
+        margin-bottom: 1.5em !important;
+        padding: 0.8em 0 !important;
+        border-bottom: 1px solid #000 !important;
         page-break-after: avoid !important;
     }
     
     .section-subtitle {
         color: #000 !important;
         opacity: 1 !important;
-        font-size: 12pt !important;
+        font-size: 10pt !important;
     }
     
     /* White text sections - force black text */
@@ -248,39 +243,59 @@
         color: #000 !important;
     }
     
+    /* Innovation highlight */
+    .innovation-highlight {
+        background: #f9f9f9 !important;
+        border: 1px solid #ccc !important;
+        padding: 1em !important;
+        margin: 1em 0 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .highlight-content ul {
+        margin-left: 1.5em !important;
+        margin-top: 0.5em !important;
+    }
+    
+    .highlight-content li {
+        margin-bottom: 0.3em !important;
+        color: #000 !important;
+        font-size: 10pt !important;
+    }
+    
     /* Day parts section */
     .day-parts {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
         page-break-inside: avoid !important;
-        margin-bottom: 2em !important;
+        margin-bottom: 1.5em !important;
     }
     
     .day-part {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .time-badge {
         background: #000 !important;
         color: #fff !important;
-        padding: 0.3em 0.8em !important;
+        padding: 0.2em 0.6em !important;
         border-radius: 0 !important;
         display: inline-block !important;
         margin-bottom: 0.5em !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         font-weight: 500 !important;
         text-transform: uppercase !important;
     }
     
     .tactics h5 {
-        margin-top: 1em !important;
-        margin-bottom: 0.5em !important;
+        margin-top: 0.8em !important;
+        margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
         font-weight: 500 !important;
     }
     
@@ -289,53 +304,53 @@
     }
     
     .tactics li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     /* Results highlight */
     .results-highlight {
         page-break-inside: avoid !important;
-        margin: 2em 0 !important;
+        margin: 1.5em 0 !important;
     }
     
     .results-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
     }
     
     .result-card {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         text-align: center !important;
         page-break-inside: avoid !important;
     }
     
     .result-icon {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
         display: block !important;
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
     }
     
     .result-card h4 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 10pt !important;
     }
     
     .result-card p {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 11pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 9pt !important;
     }
     
     .result-card small {
         display: block !important;
-        margin-top: 0.5em !important;
-        font-size: 8pt !important;
+        margin-top: 0.3em !important;
+        font-size: 7pt !important;
         color: #666 !important;
         font-style: italic !important;
     }
@@ -344,100 +359,100 @@
     .campaign-tactics {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
         page-break-inside: avoid !important;
-        margin-bottom: 2em !important;
+        margin-bottom: 1.5em !important;
     }
     
     .tactic-card {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .tactic-number {
         background: #000 !important;
         color: #fff !important;
-        width: 2em !important;
-        height: 2em !important;
+        width: 1.5em !important;
+        height: 1.5em !important;
         border-radius: 50% !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         font-weight: 600 !important;
-        margin-bottom: 1em !important;
-        font-size: 12pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 10pt !important;
     }
     
     .tactic-card h3 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 14pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 12pt !important;
     }
     
     .tactic-card p {
         color: #000 !important;
-        margin-bottom: 1em !important;
-        font-size: 11pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 9pt !important;
     }
     
     .tactic-card ul {
         margin-left: 1.5em !important;
-        margin-top: 1em !important;
+        margin-top: 0.8em !important;
     }
     
     .tactic-card li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     /* Campaign deliverables */
     .campaign-deliverables {
         page-break-inside: avoid !important;
-        margin: 2em 0 !important;
+        margin: 1.5em 0 !important;
     }
     
     .deliverables-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
     }
     
     .deliverable-item {
         display: flex !important;
         align-items: center !important;
-        gap: 1em !important;
+        gap: 0.8em !important;
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .deliverable-number {
         background: #000 !important;
         color: #fff !important;
-        width: 3em !important;
-        height: 3em !important;
+        width: 2.5em !important;
+        height: 2.5em !important;
         border-radius: 50% !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         font-weight: 600 !important;
-        font-size: 14pt !important;
+        font-size: 12pt !important;
         flex-shrink: 0 !important;
     }
     
     .deliverable-content h4 {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 12pt !important;
+        font-size: 10pt !important;
     }
     
     .deliverable-content p {
         margin-bottom: 0 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         color: #000 !important;
     }
     
@@ -445,45 +460,45 @@
     .products-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .product-card {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .product-badge {
         background: #000 !important;
         color: #fff !important;
-        padding: 0.3em 0.8em !important;
+        padding: 0.2em 0.6em !important;
         border-radius: 0 !important;
         display: inline-block !important;
-        margin-bottom: 1em !important;
-        font-size: 10pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 8pt !important;
         text-transform: uppercase !important;
         font-weight: 500 !important;
     }
     
     .product-card h3 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 14pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 12pt !important;
     }
     
     .product-description {
-        margin-bottom: 1em !important;
+        margin-bottom: 0.8em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     .product-focus h4 {
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
         font-weight: 500 !important;
     }
     
@@ -492,9 +507,9 @@
     }
     
     .product-focus li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     /* Investment section */
@@ -505,29 +520,29 @@
     .investment-breakdown {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5em !important;
-        margin: 2em 0 !important;
+        gap: 1em !important;
+        margin: 1.5em 0 !important;
         page-break-inside: avoid !important;
     }
     
     .investment-category {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .category-amount {
-        font-size: 18pt !important;
+        font-size: 16pt !important;
         font-weight: 300 !important;
         color: #000 !important;
-        margin-bottom: 1em !important;
+        margin-bottom: 0.8em !important;
     }
     
     .investment-category h4 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 10pt !important;
     }
     
     .investment-category ul {
@@ -535,67 +550,67 @@
     }
     
     .investment-category li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     .investment-hero {
         text-align: center !important;
-        margin: 2em 0 !important;
+        margin: 1.5em 0 !important;
         page-break-inside: avoid !important;
     }
     
     .investment-total {
         background: #f9f9f9 !important;
         border: 2px solid #000 !important;
-        padding: 2em !important;
+        padding: 1.5em !important;
         display: inline-block !important;
     }
     
     .total-amount {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
         font-weight: 300 !important;
         color: #000 !important;
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
     }
     
     /* Projected returns */
     .projected-returns {
         page-break-inside: avoid !important;
-        margin: 2em 0 !important;
+        margin: 1.5em 0 !important;
     }
     
     .returns-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
     }
     
     .return-item {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         text-align: center !important;
         page-break-inside: avoid !important;
     }
     
     .return-number {
-        font-size: 20pt !important;
+        font-size: 18pt !important;
         font-weight: 300 !important;
         color: #000 !important;
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
     }
     
     .return-label {
         font-weight: 400 !important;
         color: #000 !important;
-        margin-bottom: 0.3em !important;
-        font-size: 11pt !important;
+        margin-bottom: 0.2em !important;
+        font-size: 9pt !important;
     }
     
     .return-note {
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         color: #666 !important;
         font-style: italic !important;
     }
@@ -603,121 +618,123 @@
     /* Timeline section */
     .timeline-content {
         page-break-inside: avoid !important;
-        margin-bottom: 2em !important;
+        margin-bottom: 1.5em !important;
     }
     
     .timeline-phase {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
-        margin-bottom: 1.5em !important;
+        padding: 1em !important;
+        margin-bottom: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .phase-date {
         background: #000 !important;
         color: #fff !important;
-        padding: 0.3em 0.8em !important;
+        padding: 0.2em 0.6em !important;
         border-radius: 0 !important;
         display: inline-block !important;
-        margin-bottom: 1em !important;
-        font-size: 10pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 8pt !important;
         font-weight: 500 !important;
         text-transform: uppercase !important;
     }
     
     .timeline-phase h3 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 14pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 12pt !important;
     }
     
     .timeline-phase ul {
         margin-left: 1.5em !important;
-        margin-top: 1em !important;
+        margin-top: 0.8em !important;
     }
     
     .timeline-phase li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     .dynamic-content-note {
         background: #fff !important;
         border: 1px solid #000 !important;
-        padding: 1em !important;
-        margin-top: 1em !important;
+        padding: 0.8em !important;
+        margin-top: 0.8em !important;
         font-weight: 500 !important;
         color: #000 !important;
+        font-size: 9pt !important;
     }
     
     .timeline-callout {
         background: #f9f9f9 !important;
         border: 2px solid #000 !important;
-        padding: 2em !important;
-        margin: 2em 0 !important;
+        padding: 1.5em !important;
+        margin: 1.5em 0 !important;
         page-break-inside: avoid !important;
     }
     
     .timeline-callout h3 {
         color: #000 !important;
-        margin-bottom: 1em !important;
-        font-size: 16pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 14pt !important;
     }
     
     .timeline-callout p {
         color: #000 !important;
-        margin-bottom: 1em !important;
-        font-size: 11pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 9pt !important;
     }
     
     .result-highlight {
         background: #fff !important;
         border: 1px solid #000 !important;
-        padding: 1em !important;
-        margin-top: 1em !important;
+        padding: 0.8em !important;
+        margin-top: 0.8em !important;
         font-weight: 500 !important;
         color: #000 !important;
+        font-size: 9pt !important;
     }
     
     /* Day-parting section */
     .day-parting-section {
         page-break-inside: avoid !important;
-        margin: 2em 0 !important;
+        margin: 1.5em 0 !important;
     }
     
     .day-parting-section h3 {
         color: #000 !important;
-        margin-bottom: 1em !important;
-        font-size: 16pt !important;
+        margin-bottom: 0.8em !important;
+        font-size: 14pt !important;
         text-align: center !important;
     }
     
     .day-parting-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
+        gap: 1em !important;
     }
     
     .day-parting-item {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         text-align: center !important;
         page-break-inside: avoid !important;
     }
     
     .day-parting-item h4 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
+        margin-bottom: 0.3em !important;
+        font-size: 10pt !important;
         font-weight: 500 !important;
     }
     
     .day-parting-item p {
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
         margin: 0 !important;
     }
     
@@ -725,37 +742,37 @@
     .contact-wrapper {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 2em !important;
+        gap: 1.5em !important;
         page-break-inside: avoid !important;
     }
     
     .contact-info {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
-        padding: 1.5em !important;
+        padding: 1em !important;
         page-break-inside: avoid !important;
     }
     
     .contact-info h3 {
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 12pt !important;
+        font-size: 10pt !important;
     }
     
     .contact-info p {
-        margin-bottom: 0.5em !important;
+        margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     .contact-details {
-        margin-top: 1em !important;
+        margin-top: 0.8em !important;
     }
     
     .contact-details span {
-        margin-right: 1em !important;
+        margin-right: 0.8em !important;
         color: #000 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
     }
     
     .contact-details strong {
@@ -766,17 +783,17 @@
     .footer-logos-text {
         grid-column: 1 / -1 !important;
         text-align: center !important;
-        margin-top: 1em !important;
+        margin-top: 0.8em !important;
         font-weight: 400 !important;
         color: #000 !important;
-        font-size: 11pt !important;
+        font-size: 9pt !important;
     }
     
     /* Footer */
     .footer {
         text-align: center !important;
-        margin-top: 2em !important;
-        padding-top: 1em !important;
+        margin-top: 1.5em !important;
+        padding-top: 0.8em !important;
         border-top: 1px solid #ccc !important;
         page-break-inside: avoid !important;
         background: #fff !important;
@@ -785,7 +802,7 @@
     
     .footer p {
         color: #000 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
     }
     
     /* Page breaks */
@@ -813,7 +830,7 @@
     }
     
     li {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.2em !important;
         color: #000 !important;
     }
     
@@ -821,12 +838,12 @@
     table {
         border-collapse: collapse !important;
         width: 100% !important;
-        margin: 1em 0 !important;
+        margin: 0.8em 0 !important;
     }
     
     th, td {
         border: 1px solid #ccc !important;
-        padding: 0.5em !important;
+        padding: 0.3em !important;
         text-align: left !important;
         color: #000 !important;
     }
