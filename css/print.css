@@ -1,6 +1,6 @@
 /* ===========================
    PRINT STYLES FOR BIB & TUCKER CAMPAIGN
-   Fixed print functionality - ensures proper printing
+   Complete print functionality - ensures all sections print properly
    =========================== */
 
 @media print {
@@ -9,6 +9,8 @@
         -webkit-print-color-adjust: exact !important;
         color-adjust: exact !important;
         print-color-adjust: exact !important;
+        background-color: #fff !important;
+        color: #000 !important;
     }
     
     /* Hide navigation and interactive elements */
@@ -37,6 +39,19 @@
         padding: 0 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+    }
+    
+    /* Force all backgrounds to white and text to black for print */
+    .hero,
+    .opportunity,
+    .campaign,
+    .products,
+    .investment,
+    .timeline,
+    .contact,
+    .footer {
+        background: #fff !important;
+        color: #000 !important;
     }
     
     /* Typography for print */
@@ -94,6 +109,8 @@
     section {
         page-break-inside: avoid !important;
         margin-bottom: 2em !important;
+        background: #fff !important;
+        color: #000 !important;
     }
     
     /* Hero section */
@@ -218,6 +235,17 @@
         color: #000 !important;
         opacity: 1 !important;
         font-size: 12pt !important;
+    }
+    
+    /* White text sections - force black text */
+    .white-text h2,
+    .white-text h3,
+    .white-text h4,
+    .white-text h5,
+    .white-text h6,
+    .white-text p,
+    .white-text .section-subtitle {
+        color: #000 !important;
     }
     
     /* Day parts section */
@@ -653,7 +681,7 @@
         color: #000 !important;
     }
     
-    /* Day-parting section - NEW */
+    /* Day-parting section */
     .day-parting-section {
         page-break-inside: avoid !important;
         margin: 2em 0 !important;
@@ -751,6 +779,8 @@
         padding-top: 1em !important;
         border-top: 1px solid #ccc !important;
         page-break-inside: avoid !important;
+        background: #fff !important;
+        color: #000 !important;
     }
     
     .footer p {
