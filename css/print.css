@@ -1,6 +1,7 @@
 /* ===========================
    PRINT STYLES FOR BIB & TUCKER CAMPAIGN
    Complete print functionality - ensures all sections print properly
+   VERSION: 2.0 - Fixed navbar, dark text, and contact formatting
    =========================== */
 
 @media print {
@@ -36,10 +37,12 @@
         box-shadow: none !important;
         border-bottom: 1px solid #000 !important;
         margin-bottom: 1em !important;
+        padding: 0.5em 0 !important;
     }
     
     .nav-container {
         padding: 0.5em 0 !important;
+        display: block !important;
     }
     
     .nav-logo {
@@ -49,16 +52,19 @@
         font-size: 12pt !important;
         font-weight: 400 !important;
         color: #000 !important;
+        background: #fff !important;
     }
     
     .logo-text {
         color: #000 !important;
         font-weight: 500 !important;
+        background: #fff !important;
     }
     
     .logo-partners {
         color: #000 !important;
         font-size: 10pt !important;
+        background: #fff !important;
     }
     
     /* Base print styles */
@@ -92,7 +98,6 @@
     .contact-info,
     .deliverable-item,
     .product-card,
-    .campaign,
     .timeline-callout,
     .day-parting-section {
         background: #fff !important;
@@ -100,7 +105,30 @@
         border: 1px solid #ccc !important;
     }
     
-    /* Force all text to be black and visible */
+    /* Force all text to be black and visible - AGGRESSIVE STYLING */
+    .campaign,
+    .campaign *,
+    .timeline-callout,
+    .timeline-callout *,
+    .day-parting-section,
+    .day-parting-section *,
+    .white-text,
+    .white-text *,
+    .white-text h2,
+    .white-text h3,
+    .white-text h4,
+    .white-text h5,
+    .white-text h6,
+    .white-text p,
+    .white-text li,
+    .white-text .section-subtitle {
+        color: #000 !important;
+        background: #fff !important;
+        text-shadow: none !important;
+        opacity: 1 !important;
+    }
+    
+    /* Specific dark section overrides */
     .campaign h2,
     .campaign h3,
     .campaign h4,
@@ -110,14 +138,11 @@
     .timeline-callout p,
     .day-parting-section h3,
     .day-parting-section h4,
-    .day-parting-section p,
-    .white-text h2,
-    .white-text h3,
-    .white-text h4,
-    .white-text p,
-    .white-text .section-subtitle {
+    .day-parting-section p {
         color: #000 !important;
         background: #fff !important;
+        text-shadow: none !important;
+        opacity: 1 !important;
     }
     
     /* Typography for print */
@@ -129,6 +154,7 @@
         margin-bottom: 0.3em !important;
         orphans: 3 !important;
         widows: 3 !important;
+        background: #fff !important;
     }
     
     h1 {
@@ -158,11 +184,13 @@
         widows: 3 !important;
         color: #000 !important;
         font-size: 9pt !important;
+        background: #fff !important;
     }
     
     strong {
         color: #000 !important;
         font-weight: 500 !important;
+        background: #fff !important;
     }
     
     /* Container and layout fixes */
@@ -819,6 +847,8 @@
         color: #000 !important;
         font-size: 8pt !important;
         white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
     
     .contact-details {
