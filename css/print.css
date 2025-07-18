@@ -14,7 +14,6 @@
     }
     
     /* Hide navigation and interactive elements */
-    .navbar,
     .nav-menu,
     .hero-cta,
     .btn-primary,
@@ -27,6 +26,39 @@
     .divider,
     .print-button-fixed {
         display: none !important;
+    }
+    
+    /* Show navbar and logo for print */
+    .navbar {
+        display: block !important;
+        position: static !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        border-bottom: 1px solid #000 !important;
+        margin-bottom: 1em !important;
+    }
+    
+    .nav-container {
+        padding: 0.5em 0 !important;
+    }
+    
+    .nav-logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5em !important;
+        font-size: 12pt !important;
+        font-weight: 400 !important;
+        color: #000 !important;
+    }
+    
+    .logo-text {
+        color: #000 !important;
+        font-weight: 500 !important;
+    }
+    
+    .logo-partners {
+        color: #000 !important;
+        font-size: 10pt !important;
     }
     
     /* Base print styles */
@@ -59,10 +91,33 @@
     .day-parting-item,
     .contact-info,
     .deliverable-item,
-    .product-card {
+    .product-card,
+    .campaign,
+    .timeline-callout,
+    .day-parting-section {
         background: #fff !important;
         color: #000 !important;
         border: 1px solid #ccc !important;
+    }
+    
+    /* Force all text to be black and visible */
+    .campaign h2,
+    .campaign h3,
+    .campaign h4,
+    .campaign p,
+    .campaign li,
+    .timeline-callout h3,
+    .timeline-callout p,
+    .day-parting-section h3,
+    .day-parting-section h4,
+    .day-parting-section p,
+    .white-text h2,
+    .white-text h3,
+    .white-text h4,
+    .white-text p,
+    .white-text .section-subtitle {
+        color: #000 !important;
+        background: #fff !important;
     }
     
     /* Typography for print */
@@ -241,17 +296,6 @@
         color: #000 !important;
         opacity: 1 !important;
         font-size: 9pt !important;
-    }
-    
-    /* White text sections - force black text */
-    .white-text h2,
-    .white-text h3,
-    .white-text h4,
-    .white-text h5,
-    .white-text h6,
-    .white-text p,
-    .white-text .section-subtitle {
-        color: #000 !important;
     }
     
     /* Innovation highlight */
@@ -774,6 +818,7 @@
         margin-bottom: 0.2em !important;
         color: #000 !important;
         font-size: 8pt !important;
+        white-space: nowrap !important;
     }
     
     .contact-details {
