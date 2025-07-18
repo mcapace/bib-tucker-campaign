@@ -672,12 +672,12 @@ strong {
     color: var(--white);
 }
 
-.campaign-tactics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
+    .campaign-tactics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
 
 .tactic-card {
     background: rgba(255, 255, 255, 0.05);
@@ -747,11 +747,11 @@ strong {
     margin-top: 4rem;
 }
 
-.deliverables-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
+    .deliverables-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 
 .deliverable-item {
     background: rgba(255, 255, 255, 0.05);
@@ -909,11 +909,11 @@ strong {
     gap: 3rem;
 }
 
-.investment-breakdown {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
+    .investment-breakdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 
 .investment-category {
     background: rgba(255, 255, 255, 0.05);
@@ -1151,12 +1151,12 @@ strong {
     margin-top: 4rem;
 }
 
-.day-parting-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
+    .day-parting-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
 
 .day-parting-item {
     background: var(--white);
@@ -1366,6 +1366,10 @@ strong {
     }
     
     .returns-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .day-parting-grid {
         grid-template-columns: 1fr;
     }
     

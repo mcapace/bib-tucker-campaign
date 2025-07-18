@@ -22,7 +22,8 @@
     .partner-divider,
     .logo-divider,
     .logo-separator,
-    .divider {
+    .divider,
+    .print-button-fixed {
         display: none !important;
     }
     
@@ -52,22 +53,22 @@
     h1 {
         font-size: 24pt !important;
         margin-top: 0 !important;
-        font-weight: 900 !important;
+        font-weight: 300 !important;
     }
     
     h2 {
         font-size: 20pt !important;
-        font-weight: 800 !important;
+        font-weight: 300 !important;
     }
     
     h3 {
         font-size: 16pt !important;
-        font-weight: 700 !important;
+        font-weight: 400 !important;
     }
     
     h4 {
         font-size: 14pt !important;
-        font-weight: 600 !important;
+        font-weight: 400 !important;
     }
     
     p {
@@ -79,7 +80,7 @@
     
     strong {
         color: #000 !important;
-        font-weight: 600 !important;
+        font-weight: 500 !important;
     }
     
     /* Container and layout fixes */
@@ -117,7 +118,7 @@
         display: inline-block !important;
         margin-bottom: 1em !important;
         font-size: 10pt !important;
-        font-weight: 700 !important;
+        font-weight: 400 !important;
         text-transform: uppercase !important;
     }
     
@@ -167,14 +168,14 @@
         color: #000 !important;
         text-shadow: none !important;
         font-size: 18pt !important;
-        font-weight: 700 !important;
+        font-weight: 300 !important;
     }
     
     .stat-label {
         color: #000 !important;
         opacity: 1 !important;
         font-size: 10pt !important;
-        font-weight: 700 !important;
+        font-weight: 400 !important;
         text-transform: uppercase !important;
     }
     
@@ -201,7 +202,7 @@
         color: #000 !important;
         font-size: 10pt !important;
         margin-top: 0.5em !important;
-        font-weight: 600 !important;
+        font-weight: 400 !important;
     }
     
     /* Section headers */
@@ -221,15 +222,17 @@
     
     /* Day parts section */
     .day-parts {
-        display: block !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5em !important;
         page-break-inside: avoid !important;
+        margin-bottom: 2em !important;
     }
     
     .day-part {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
         padding: 1.5em !important;
-        margin-bottom: 1.5em !important;
         page-break-inside: avoid !important;
     }
     
@@ -241,7 +244,7 @@
         display: inline-block !important;
         margin-bottom: 0.5em !important;
         font-size: 10pt !important;
-        font-weight: 700 !important;
+        font-weight: 500 !important;
         text-transform: uppercase !important;
     }
     
@@ -250,8 +253,7 @@
         margin-bottom: 0.5em !important;
         color: #000 !important;
         font-size: 11pt !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
+        font-weight: 500 !important;
     }
     
     .tactics ul {
@@ -261,49 +263,6 @@
     .tactics li {
         margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 11pt !important;
-    }
-    
-    /* Partnerships overview */
-    .partnerships-overview {
-        page-break-inside: avoid !important;
-        margin: 2em 0 !important;
-    }
-    
-    .partnerships-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5em !important;
-    }
-    
-    .partnership-card {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
-        padding: 1.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .partnership-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .partnership-logo {
-        height: 30px !important;
-        filter: none !important;
-    }
-    
-    .partnership-product {
-        font-weight: bold !important;
-        color: #000 !important;
-        font-size: 12pt !important;
-    }
-    
-    .partnership-role {
-        color: #000 !important;
-        font-style: italic !important;
         font-size: 11pt !important;
     }
     
@@ -356,9 +315,10 @@
     /* Campaign tactics */
     .campaign-tactics {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 1.5em !important;
         page-break-inside: avoid !important;
+        margin-bottom: 2em !important;
     }
     
     .tactic-card {
@@ -377,7 +337,7 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        font-weight: bold !important;
+        font-weight: 600 !important;
         margin-bottom: 1em !important;
         font-size: 12pt !important;
     }
@@ -413,7 +373,7 @@
     
     .deliverables-grid {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 1.5em !important;
     }
     
@@ -436,7 +396,7 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        font-weight: bold !important;
+        font-weight: 600 !important;
         font-size: 14pt !important;
         flex-shrink: 0 !important;
     }
@@ -477,20 +437,13 @@
         margin-bottom: 1em !important;
         font-size: 10pt !important;
         text-transform: uppercase !important;
-        font-weight: 700 !important;
+        font-weight: 500 !important;
     }
     
     .product-card h3 {
         color: #000 !important;
         margin-bottom: 0.5em !important;
         font-size: 14pt !important;
-    }
-    
-    .product-partner {
-        color: #666 !important;
-        font-style: italic !important;
-        margin-bottom: 1em !important;
-        font-size: 11pt !important;
     }
     
     .product-description {
@@ -503,8 +456,7 @@
         margin-bottom: 0.5em !important;
         color: #000 !important;
         font-size: 11pt !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
+        font-weight: 500 !important;
     }
     
     .product-focus ul {
@@ -522,29 +474,9 @@
         page-break-inside: avoid !important;
     }
     
-    .investment-hero {
-        text-align: center !important;
-        margin-bottom: 2em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .investment-total {
-        background: #f9f9f9 !important;
-        border: 2px solid #000 !important;
-        padding: 2em !important;
-        display: inline-block !important;
-    }
-    
-    .total-amount {
-        font-size: 24pt !important;
-        font-weight: bold !important;
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-    }
-    
     .investment-breakdown {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.5em !important;
         margin: 2em 0 !important;
         page-break-inside: avoid !important;
@@ -559,7 +491,7 @@
     
     .category-amount {
         font-size: 18pt !important;
-        font-weight: bold !important;
+        font-weight: 300 !important;
         color: #000 !important;
         margin-bottom: 1em !important;
     }
@@ -578,6 +510,26 @@
         margin-bottom: 0.3em !important;
         color: #000 !important;
         font-size: 11pt !important;
+    }
+    
+    .investment-hero {
+        text-align: center !important;
+        margin: 2em 0 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .investment-total {
+        background: #f9f9f9 !important;
+        border: 2px solid #000 !important;
+        padding: 2em !important;
+        display: inline-block !important;
+    }
+    
+    .total-amount {
+        font-size: 24pt !important;
+        font-weight: 300 !important;
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
     }
     
     /* Projected returns */
@@ -602,17 +554,16 @@
     
     .return-number {
         font-size: 20pt !important;
-        font-weight: bold !important;
+        font-weight: 300 !important;
         color: #000 !important;
         margin-bottom: 0.5em !important;
     }
     
     .return-label {
-        font-weight: bold !important;
+        font-weight: 400 !important;
         color: #000 !important;
         margin-bottom: 0.3em !important;
         font-size: 11pt !important;
-        text-transform: uppercase !important;
     }
     
     .return-note {
@@ -624,6 +575,7 @@
     /* Timeline section */
     .timeline-content {
         page-break-inside: avoid !important;
+        margin-bottom: 2em !important;
     }
     
     .timeline-phase {
@@ -642,7 +594,7 @@
         display: inline-block !important;
         margin-bottom: 1em !important;
         font-size: 10pt !important;
-        font-weight: bold !important;
+        font-weight: 500 !important;
         text-transform: uppercase !important;
     }
     
@@ -668,7 +620,7 @@
         border: 1px solid #000 !important;
         padding: 1em !important;
         margin-top: 1em !important;
-        font-weight: bold !important;
+        font-weight: 500 !important;
         color: #000 !important;
     }
     
@@ -692,65 +644,35 @@
         font-size: 11pt !important;
     }
     
-    .time-examples {
-        margin: 1em 0 !important;
-    }
-    
-    .time-example {
-        margin-bottom: 0.5em !important;
-        color: #000 !important;
-        font-size: 11pt !important;
-    }
-    
     .result-highlight {
         background: #fff !important;
         border: 1px solid #000 !important;
         padding: 1em !important;
         margin-top: 1em !important;
-        font-weight: bold !important;
+        font-weight: 500 !important;
         color: #000 !important;
     }
     
-    /* Redemption section */
-    .redemption-hero {
-        text-align: center !important;
-        margin-bottom: 2em !important;
+    /* Day-parting section - NEW */
+    .day-parting-section {
         page-break-inside: avoid !important;
+        margin: 2em 0 !important;
     }
     
-    .redemption-badge {
-        background: #000 !important;
-        color: #fff !important;
-        padding: 0.5em 1em !important;
-        border-radius: 0 !important;
-        display: inline-block !important;
-        margin-bottom: 1em !important;
-        font-size: 10pt !important;
-        text-transform: uppercase !important;
-        font-weight: bold !important;
-    }
-    
-    .redemption-hero h3 {
+    .day-parting-section h3 {
         color: #000 !important;
-        margin-bottom: 0.5em !important;
+        margin-bottom: 1em !important;
         font-size: 16pt !important;
+        text-align: center !important;
     }
     
-    .redemption-lead {
-        font-size: 14pt !important;
-        font-weight: bold !important;
-        color: #000 !important;
-    }
-    
-    .sponsorship-features {
+    .day-parting-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 1.5em !important;
-        margin: 2em 0 !important;
-        page-break-inside: avoid !important;
     }
     
-    .feature-card {
+    .day-parting-item {
         background: #f9f9f9 !important;
         border: 1px solid #ccc !important;
         padding: 1.5em !important;
@@ -758,111 +680,17 @@
         page-break-inside: avoid !important;
     }
     
-    .feature-icon {
-        font-size: 24pt !important;
-        display: block !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .feature-card h4 {
+    .day-parting-item h4 {
         color: #000 !important;
         margin-bottom: 0.5em !important;
         font-size: 12pt !important;
+        font-weight: 500 !important;
     }
     
-    .feature-card p {
+    .day-parting-item p {
         color: #000 !important;
         font-size: 11pt !important;
-    }
-    
-    .pairing-opportunity {
-        page-break-inside: avoid !important;
-        margin: 2em 0 !important;
-    }
-    
-    .pairing-opportunity h3 {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 14pt !important;
-    }
-    
-    .pairing-opportunity p {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 11pt !important;
-    }
-    
-    .note {
-        font-style: italic !important;
-        color: #666 !important;
-        font-size: 10pt !important;
-    }
-    
-    .pairing-stats {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
-        margin-top: 1.5em !important;
-    }
-    
-    .pairing-stat {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
-        padding: 1.5em !important;
-        text-align: center !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .stat-big {
-        font-size: 20pt !important;
-        font-weight: bold !important;
-        color: #000 !important;
-        display: block !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .stat-label {
-        color: #000 !important;
-        opacity: 1 !important;
-        font-size: 11pt !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
-    }
-    
-    .redemption-benefits {
-        page-break-inside: avoid !important;
-        margin: 2em 0 !important;
-    }
-    
-    .redemption-benefits h3 {
-        color: #000 !important;
-        margin-bottom: 1em !important;
-        text-align: center !important;
-        font-size: 14pt !important;
-    }
-    
-    .benefits-row {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.5em !important;
-    }
-    
-    .benefit-item {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
-        padding: 1.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .benefit-item h4 {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
-    }
-    
-    .benefit-item p {
-        color: #000 !important;
-        font-size: 11pt !important;
+        margin: 0 !important;
     }
     
     /* Contact section */
@@ -904,14 +732,14 @@
     
     .contact-details strong {
         color: #000 !important;
-        font-weight: 600 !important;
+        font-weight: 500 !important;
     }
     
     .footer-logos-text {
         grid-column: 1 / -1 !important;
         text-align: center !important;
         margin-top: 1em !important;
-        font-weight: bold !important;
+        font-weight: 400 !important;
         color: #000 !important;
         font-size: 11pt !important;
     }
@@ -935,8 +763,7 @@
     .campaign,
     .products,
     .investment,
-    .timeline,
-    .redemption {
+    .timeline {
         page-break-before: always !important;
     }
     
@@ -976,7 +803,7 @@
     
     th {
         background: #f9f9f9 !important;
-        font-weight: bold !important;
+        font-weight: 500 !important;
     }
     
     /* Force all backgrounds to be visible in print */
