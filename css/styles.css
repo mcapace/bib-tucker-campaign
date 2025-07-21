@@ -1908,3 +1908,121 @@ strong {
         gap: 0.8rem;
     }
 }
+
+/* Campaign Extensions Section */
+.campaign-extensions {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.campaign-extensions h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.campaign-extensions .lead-text {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.extension-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.extension-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+    position: relative;
+}
+
+.extension-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--soft-gold), var(--accent-bronze));
+    border-radius: 20px 20px 0 0;
+}
+
+.extension-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.extension-card:hover::before {
+    height: 6px;
+}
+
+.extension-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.extension-content h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.extension-content p {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.extension-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.extension-content li {
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.extension-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--soft-gold);
+    font-weight: bold;
+}
+
+.extension-content li strong {
+    color: var(--soft-gold);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .extension-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .extension-card {
+        padding: 2rem;
+    }
+}
