@@ -1707,3 +1707,115 @@ strong {
         gap: 0.8rem;
     }
 }
+
+/* Media Integration Tactics - Matching 24/7 Dynamic Content Hub */
+.media-integration .media-tactics {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.media-tactic {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+}
+
+.media-tactic:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateX(5px);
+}
+
+.tactic-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tactic-content h4 {
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.tactic-content p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Influencer Network Types - Matching 24/7 Dynamic Content Hub */
+.influencer-network .influencer-types {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.influencer-type {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+}
+
+.influencer-type:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateX(5px);
+}
+
+.influencer-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.influencer-content h4 {
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.influencer-content p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .media-tactic,
+    .influencer-type {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+}
