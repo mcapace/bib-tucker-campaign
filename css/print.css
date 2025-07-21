@@ -334,11 +334,39 @@
     
     /* Innovation highlight */
     .innovation-highlight {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
+        background: #fff !important;
+        border: 1px solid #000 !important;
         padding: 0.5em !important;
         margin: 0.5em 0 !important;
         page-break-inside: avoid !important;
+    }
+    
+    .highlight-icon {
+        font-size: 14pt !important;
+        width: 35px !important;
+        height: 35px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #f0f0f0 !important;
+        border: 1px solid #000 !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .highlight-content h4 {
+        color: #000 !important;
+        margin-bottom: 0.3em !important;
+        font-weight: 500 !important;
+        font-size: 11pt !important;
+    }
+    
+    .highlight-content p {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 400 !important;
+        line-height: 1.3 !important;
+        font-size: 8pt !important;
     }
     
     .highlight-content ul {
@@ -349,7 +377,13 @@
     .highlight-content li {
         margin-bottom: 0.2em !important;
         color: #000 !important;
-        font-size: 9pt !important;
+        font-size: 8pt !important;
+        padding-left: 1em !important;
+    }
+    
+    .highlight-content li strong {
+        color: #000 !important;
+        font-weight: 600 !important;
     }
     
     /* Day parts section */
