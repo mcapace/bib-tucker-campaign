@@ -723,9 +723,9 @@ strong {
 }
 
 .tactic-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .tactic-card ul {
@@ -735,8 +735,8 @@ strong {
 
 .tactic-card li {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 400;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -747,6 +747,12 @@ strong {
     left: 0;
     color: var(--soft-gold);
     font-weight: bold;
+}
+
+.tactic-card li strong {
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 .campaign-deliverables {
@@ -995,8 +1001,8 @@ strong {
 }
 
 .investment-total p {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -1042,9 +1048,9 @@ strong {
 }
 
 .return-note {
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Timeline Section */
@@ -1139,8 +1145,8 @@ strong {
 }
 
 .timeline-callout p {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 400;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -1226,9 +1232,9 @@ strong {
 }
 
 .contact-info p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .contact-details {
@@ -1459,10 +1465,10 @@ strong {
 }
 
 .time-content p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     margin: 0;
     font-size: 0.85rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Investment Section Headers */
@@ -1590,8 +1596,8 @@ strong {
 }
 
 .slot-content {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 400;
     font-size: 0.85rem;
 }
 
@@ -1669,9 +1675,9 @@ strong {
 
 .experience-text p,
 .result-text p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
 }
 
