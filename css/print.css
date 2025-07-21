@@ -1,17 +1,25 @@
 /* ===========================
    PRINT STYLES FOR BIB & TUCKER CAMPAIGN
    Complete print functionality - ensures all sections print properly
-   VERSION: 2.0 - Fixed navbar, dark text, and contact formatting
+   VERSION: 3.0 - Optimized for best print quality and professional presentation
    =========================== */
 
 @media print {
-    /* Essential print resets */
+    /* Essential print resets and optimizations */
     * {
         -webkit-print-color-adjust: exact !important;
         color-adjust: exact !important;
         print-color-adjust: exact !important;
         background-color: #fff !important;
         color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Page setup for professional printing */
+    @page {
+        margin: 0.5in !important;
+        size: A4 !important;
     }
     
     /* Hide navigation and interactive elements */
@@ -73,16 +81,17 @@
         background: #fff !important;
     }
     
-    /* Base print styles */
+    /* Base print styles - optimized for readability */
     body {
-        font-size: 8pt !important;
-        line-height: 1.1 !important;
+        font-size: 9pt !important;
+        line-height: 1.3 !important;
         color: #000 !important;
         background: #fff !important;
         margin: 0 !important;
         padding: 0 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        font-family: "Times New Roman", serif !important;
     }
     
     /* Force all backgrounds to white and text to black for print */
@@ -156,46 +165,51 @@
         color: #000 !important;
         page-break-after: avoid !important;
         page-break-inside: avoid !important;
-        margin-top: 0.5em !important;
-        margin-bottom: 0.3em !important;
+        margin-top: 0.8em !important;
+        margin-bottom: 0.4em !important;
         orphans: 3 !important;
         widows: 3 !important;
         background: #fff !important;
+        font-family: "Times New Roman", serif !important;
     }
     
     h1 {
-        font-size: 14pt !important;
+        font-size: 16pt !important;
         margin-top: 0 !important;
-        font-weight: 300 !important;
+        font-weight: 600 !important;
+        page-break-before: auto !important;
     }
     
     h2 {
-        font-size: 11pt !important;
-        font-weight: 300 !important;
+        font-size: 13pt !important;
+        font-weight: 600 !important;
+        page-break-before: auto !important;
     }
     
     h3 {
-        font-size: 9pt !important;
-        font-weight: 400 !important;
+        font-size: 11pt !important;
+        font-weight: 500 !important;
     }
     
     h4 {
-        font-size: 8pt !important;
-        font-weight: 400 !important;
+        font-size: 10pt !important;
+        font-weight: 500 !important;
     }
     
     p {
-        margin-bottom: 0.2em !important;
+        margin-bottom: 0.4em !important;
         orphans: 3 !important;
         widows: 3 !important;
         color: #000 !important;
-        font-size: 7pt !important;
+        font-size: 9pt !important;
         background: #fff !important;
+        line-height: 1.4 !important;
+        text-align: justify !important;
     }
     
     strong {
         color: #000 !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
         background: #fff !important;
     }
     
@@ -209,10 +223,11 @@
     
     section {
         page-break-inside: avoid !important;
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.8em !important;
         background: #fff !important;
         color: #000 !important;
-        padding: 0.2em 0 !important;
+        padding: 0.5em 0 !important;
+        border-bottom: 1px solid #ccc !important;
     }
     
     /* Hero section */
@@ -332,13 +347,14 @@
         font-size: 9pt !important;
     }
     
-    /* Innovation highlight */
+    /* Innovation highlight - optimized for print */
     .innovation-highlight {
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        padding: 0.5em !important;
-        margin: 0.5em 0 !important;
+        background: #f9f9f9 !important;
+        border: 2px solid #000 !important;
+        padding: 1em !important;
+        margin: 1em 0 !important;
         page-break-inside: avoid !important;
+        border-radius: 0 !important;
     }
     
     .highlight-icon {
@@ -890,12 +906,11 @@
     }
     
     .contact-info p {
-        margin-bottom: 0.2em !important;
+        margin-bottom: 0.3em !important;
         color: #000 !important;
-        font-size: 8pt !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        font-size: 9pt !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
     }
     
     .contact-details {
