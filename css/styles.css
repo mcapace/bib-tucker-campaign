@@ -1661,12 +1661,13 @@ strong {
 
 /* Timeline Callout Redesign */
 .timeline-callout {
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, var(--deep-navy) 0%, #2a2a4e 100%);
+    padding: 3rem;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--white);
     border: 2px solid rgba(212, 175, 55, 0.3);
-    padding: 2rem;
-    border-radius: 20px;
-    margin: 3rem 0;
-    backdrop-filter: blur(10px);
 }
 
 .callout-header {
@@ -1677,14 +1678,16 @@ strong {
 }
 
 .callout-icon {
-    font-size: 1.8rem;
-    width: 50px;
-    height: 50px;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.3);
     border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    color: var(--soft-gold);
 }
 
 .callout-header h3 {
@@ -1712,15 +1715,17 @@ strong {
 
 .experience-icon,
 .result-icon {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.3);
     border-radius: 50%;
     flex-shrink: 0;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    color: var(--soft-gold);
 }
 
 .experience-text h4,
@@ -1728,7 +1733,7 @@ strong {
     color: var(--soft-gold);
     margin-bottom: 0.5rem;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .experience-text p,
@@ -1737,6 +1742,7 @@ strong {
     margin: 0;
     font-weight: 400;
     line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* Responsive adjustments */
