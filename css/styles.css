@@ -759,6 +759,13 @@ strong {
     margin-top: 4rem;
 }
 
+.campaign-deliverables h3 {
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
     .deliverables-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -804,8 +811,8 @@ strong {
 }
 
 .deliverable-content p {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 400;
     margin: 0;
 }
 

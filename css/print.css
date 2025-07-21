@@ -503,6 +503,13 @@
         margin: 0.8em 0 !important;
     }
     
+    .campaign-deliverables h3 {
+        color: #000 !important;
+        margin-bottom: 1em !important;
+        font-weight: 500 !important;
+        font-size: 12pt !important;
+    }
+    
     .deliverables-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
