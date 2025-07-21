@@ -1,584 +1,491 @@
 /* ===========================
    PRINT STYLES FOR BIB & TUCKER CAMPAIGN
-   Complete print functionality - ensures all sections print properly
-   VERSION: 3.0 - Optimized for best print quality and professional presentation
+   VERSION: 5.3 - Navbar removal and color fixes
    =========================== */
 
 @media print {
-    /* Essential print resets and optimizations */
+    /* CRITICAL: Override ALL hiding and ensure visibility */
     * {
         -webkit-print-color-adjust: exact !important;
         color-adjust: exact !important;
         print-color-adjust: exact !important;
-        background-color: #fff !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        text-align: left !important;
     }
     
-    /* Page setup for professional printing */
+    /* Force all elements to display */
+    html, body, div, section, article, header, footer, main, aside, nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+        position: static !important;
+        transform: none !important;
+    }
+    
+    /* Force all text elements to be visible */
+    h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, label, strong, em, b, i, small {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: inherit !important;
+        background: transparent !important;
+    }
+    
+    /* Force all lists to show */
+    ul, ol {
+        display: block !important;
+        visibility: visible !important;
+        list-style: disc !important;
+        margin-left: 2em !important;
+    }
+    
+    li {
+        display: list-item !important;
+        visibility: visible !important;
+        margin-bottom: 0.2em !important;
+    }
+    
+    /* Essential print setup */
     @page {
-        margin: 0.5in !important;
-        size: A4 !important;
+        margin: 0.5in;
+        size: A4;
     }
     
-    /* Hide navigation and interactive elements */
+    /* Hide ALL navigation and interactive elements */
+    .navbar,
+    .nav-container,
+    .nav-logo,
     .nav-menu,
+    .nav-cta,
     .hero-cta,
     .btn-primary,
     .btn-secondary,
     .hero-overlay,
-    .innovation-badge,
-    .partner-divider,
-    .logo-divider,
-    .logo-separator,
-    .divider,
-    .print-button-fixed {
+    .print-button-fixed,
+    .pdf-btn {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
     
-    /* Show navbar and logo for print */
-    .navbar {
-        display: block !important;
-        position: static !important;
-        background: #fff !important;
-        box-shadow: none !important;
-        border-bottom: 1px solid #000 !important;
-        margin-bottom: 1em !important;
-        padding: 0.5em 0 !important;
-    }
-    
-    .nav-container {
-        padding: 0.5em 0 !important;
-        display: block !important;
-    }
-    
-    .nav-logo {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        font-size: 12pt !important;
-        font-weight: 400 !important;
-        color: #000 !important;
-        background: #fff !important;
-    }
-    
-    .nav-logo-img {
-        height: 40px !important;
-        width: auto !important;
-        object-fit: contain !important;
-    }
-    
-    .logo-text {
-        color: #000 !important;
-        font-weight: 500 !important;
-        background: #fff !important;
-    }
-    
-    .logo-partners {
-        color: #000 !important;
-        font-size: 10pt !important;
-        background: #fff !important;
-    }
-    
-    /* Base print styles - optimized for readability */
+    /* Base styles */
     body {
-        font-size: 9pt !important;
-        line-height: 1.3 !important;
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
         color: #000 !important;
         background: #fff !important;
         margin: 0 !important;
         padding: 0 !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        font-family: "Times New Roman", serif !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    /* Force all backgrounds to white and text to black for print */
-    .hero,
-    .opportunity,
-    .campaign,
-    .products,
-    .investment,
-    .timeline,
-    .contact,
-    .footer,
-    .tactic-card,
-    .day-part,
-    .result-card,
-    .investment-category,
-    .return-item,
-    .timeline-phase,
-    .day-parting-item,
-    .contact-info,
-    .deliverable-item,
-    .product-card,
-    .timeline-callout,
-    .day-parting-section {
-        background: #fff !important;
-        color: #000 !important;
-        border: 1px solid #ccc !important;
-    }
-    
-    /* Force all text to be black and visible - AGGRESSIVE STYLING */
-    .campaign,
-    .campaign *,
-    .timeline-callout,
-    .timeline-callout *,
-    .day-parting-section,
-    .day-parting-section *,
-    .white-text,
-    .white-text *,
-    .white-text h2,
-    .white-text h3,
-    .white-text h4,
-    .white-text h5,
-    .white-text h6,
-    .white-text p,
-    .white-text li,
-    .white-text .section-subtitle {
-        color: #000 !important;
-        background: #fff !important;
-        text-shadow: none !important;
-        opacity: 1 !important;
-    }
-    
-    /* Specific dark section overrides */
-    .campaign h2,
-    .campaign h3,
-    .campaign h4,
-    .campaign p,
-    .campaign li,
-    .timeline-callout h3,
-    .timeline-callout p,
-    .day-parting-section h3,
-    .day-parting-section h4,
-    .day-parting-section p {
-        color: #000 !important;
-        background: #fff !important;
-        text-shadow: none !important;
-        opacity: 1 !important;
-    }
-    
-    /* Typography for print */
-    h1, h2, h3, h4, h5, h6 {
-        color: #000 !important;
-        page-break-after: avoid !important;
-        page-break-inside: avoid !important;
-        margin-top: 0.8em !important;
-        margin-bottom: 0.4em !important;
-        orphans: 3 !important;
-        widows: 3 !important;
-        background: #fff !important;
-        font-family: "Times New Roman", serif !important;
-    }
-    
-    h1 {
-        font-size: 16pt !important;
-        margin-top: 0 !important;
-        font-weight: 600 !important;
-        page-break-before: auto !important;
-    }
-    
-    h2 {
-        font-size: 13pt !important;
-        font-weight: 600 !important;
-        page-break-before: auto !important;
-    }
-    
-    h3 {
-        font-size: 11pt !important;
-        font-weight: 500 !important;
-    }
-    
-    h4 {
-        font-size: 10pt !important;
-        font-weight: 500 !important;
-    }
-    
-    p {
-        margin-bottom: 0.4em !important;
-        orphans: 3 !important;
-        widows: 3 !important;
-        color: #000 !important;
-        font-size: 9pt !important;
-        background: #fff !important;
-        line-height: 1.4 !important;
-        text-align: justify !important;
-    }
-    
-    strong {
-        color: #000 !important;
-        font-weight: 600 !important;
-        background: #fff !important;
-    }
-    
-    /* Container and layout fixes */
+    /* Container setup */
     .container {
         max-width: none !important;
         width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    section {
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        page-break-after: avoid !important;
         page-break-inside: avoid !important;
-        margin-bottom: 0.8em !important;
-        background: #fff !important;
-        color: #000 !important;
-        padding: 0.5em 0 !important;
-        border-bottom: 1px solid #ccc !important;
-    }
-    
-    /* Hero section */
-    .hero {
-        min-height: auto !important;
-        background: #fff !important;
-        margin-top: 0 !important;
-        padding: 0.2em 0 !important;
-        page-break-after: auto !important;
-    }
-    
-    .hero-content {
-        text-align: left !important;
-        padding: 0 !important;
-    }
-    
-    .hero-badge {
-        background: #000 !important;
-        color: #fff !important;
-        padding: 0.1em 0.3em !important;
-        border-radius: 0 !important;
-        display: inline-block !important;
-        margin-bottom: 0.2em !important;
-        font-size: 6pt !important;
+        margin-top: 1em !important;
+        margin-bottom: 0.5em !important;
         font-weight: 400 !important;
-        text-transform: uppercase !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    h1 {
+        font-size: 18pt !important;
+        font-weight: 300 !important;
+    }
+    
+    h2 {
+        font-size: 16pt !important;
+        font-weight: 300 !important;
+    }
+    
+    h3 {
+        font-size: 14pt !important;
+        font-weight: 400 !important;
+    }
+    
+    h4 {
+        font-size: 12pt !important;
+        font-weight: 400 !important;
+    }
+    
+    p {
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        font-weight: 300 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Section Headers */
+    .section-header {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        margin-bottom: 1em !important;
+        padding-bottom: 0.5em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .section-subtitle {
+        color: #666 !important;
+        font-size: 10pt !important;
+        margin-top: 0.2em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Hero Section - Dark background with white text */
+    .hero {
+        background: #1a1a1a !important;
+        color: #fff !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 3px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .hero * {
+        color: #fff !important;
+        background: transparent !important;
+        visibility: visible !important;
     }
     
     .hero-title {
-        color: #000 !important;
-        text-shadow: none !important;
-        margin-bottom: 0.2em !important;
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        color: #fff !important;
+        font-size: 18pt !important;
+        font-weight: 300 !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .hero-subtitle {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        color: #fff !important;
+        font-size: 11pt !important;
+        opacity: 0.9 !important;
+        margin-bottom: 1em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .hero-badge {
+        background: #d4af37 !important;
         color: #000 !important;
-        opacity: 1 !important;
-        margin-bottom: 0.3em !important;
+        padding: 0.2em 0.5em !important;
         font-size: 8pt !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
+        margin-bottom: 1em !important;
+        visibility: visible !important;
     }
     
     .hero-innovation {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
-        padding: 0.3em !important;
-        margin: 0.3em 0 !important;
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1em !important;
+        margin: 1em 0 !important;
+        display: block !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
-    .innovation-description {
+    .innovation-badge {
+        background: #d4af37 !important;
         color: #000 !important;
-        font-size: 9pt !important;
+        padding: 0.2em 0.5em !important;
+        font-size: 8pt !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
+        margin-bottom: 0.5em !important;
+        visibility: visible !important;
     }
     
-    /* Stats section */
+    .innovation-icon {
+        margin-right: 0.5em !important;
+        visibility: visible !important;
+    }
+    
+    .innovation-description {
+        color: #fff !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
     .hero-stats {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.3em !important;
-        margin: 0.3em 0 !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
     .stat {
-        background: #f9f9f9 !important;
-        border: 1px solid #ccc !important;
-        padding: 0.3em !important;
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1em !important;
         text-align: center !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .stat-number {
-        color: #000 !important;
-        text-shadow: none !important;
-        font-size: 10pt !important;
+        color: #d4af37 !important;
+        font-size: 16pt !important;
         font-weight: 300 !important;
+        margin-bottom: 0.2em !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .stat-label {
-        color: #000 !important;
-        opacity: 1 !important;
-        font-size: 6pt !important;
-        font-weight: 400 !important;
-        text-transform: uppercase !important;
+        color: #fff !important;
+        font-size: 8pt !important;
+        opacity: 0.8 !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    /* Partners section */
     .hero-partners {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        margin: 0.3em 0 !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
-    }
-    
-    .partner-item {
-        text-align: center !important;
     }
     
     .partner-logo {
         height: 40px !important;
-        filter: none !important;
-        opacity: 1 !important;
+        filter: brightness(0) invert(1) !important;
+        visibility: visible !important;
     }
     
-    /* Section headers */
-    .section-header {
-        text-align: left !important;
-        margin-bottom: 0.8em !important;
-        padding: 0.3em 0 !important;
-        border-bottom: 1px solid #000 !important;
-        page-break-after: avoid !important;
-    }
-    
-    .section-subtitle {
+    /* Opportunity Section - Light background with dark text */
+    .opportunity {
+        background: #f8f8f8 !important;
         color: #000 !important;
-        opacity: 1 !important;
-        font-size: 9pt !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    /* Innovation highlight - optimized for print */
+    .opportunity * {
+        color: #000 !important;
+        background: transparent !important;
+        visibility: visible !important;
+        text-align: left !important;
+    }
+    
+    .opportunity .section-header h2 {
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .opportunity .section-subtitle {
+        color: #666 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .lead-text {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        font-size: 11pt !important;
+        font-weight: 500 !important;
+        margin-bottom: 1em !important;
+        text-align: left !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
     .innovation-highlight {
-        background: #f9f9f9 !important;
-        border: 2px solid #000 !important;
-        padding: 1em !important;
+        background: #fff !important;
+        border: 2px solid #d4af37 !important;
+        padding: 1.5em !important;
         margin: 1em 0 !important;
+        display: block !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
-        border-radius: 0 !important;
+        text-align: left !important;
+        flex-direction: unset !important;
+        align-items: unset !important;
+        justify-content: unset !important;
     }
     
     .highlight-icon {
-        font-size: 14pt !important;
-        width: 35px !important;
-        height: 35px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #000 !important;
-        border-radius: 50% !important;
-        flex-shrink: 0 !important;
+        font-size: 16pt !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .highlight-content h4 {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
         color: #000 !important;
-        margin-bottom: 0.3em !important;
-        font-weight: 500 !important;
-        font-size: 11pt !important;
+        margin-top: 1em !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 400 !important;
+        text-align: left !important;
+        display: block !important;
+        visibility: visible !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
     .highlight-content p {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
         color: #000 !important;
         margin-bottom: 0.5em !important;
-        font-weight: 400 !important;
-        line-height: 1.3 !important;
-        font-size: 8pt !important;
+        font-weight: 300 !important;
+        font-size: 10pt !important;
+        text-align: left !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .highlight-content ul {
         margin-left: 1.5em !important;
-        margin-top: 0.3em !important;
+        text-align: left !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
     }
     
     .highlight-content li {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        color: #000 !important;
         margin-bottom: 0.2em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-        padding-left: 1em !important;
+        font-weight: 300 !important;
+        text-align: left !important;
+        display: list-item !important;
+        visibility: visible !important;
     }
     
-    .highlight-content li strong {
-        color: #000 !important;
-        font-weight: 600 !important;
-    }
-    
-    /* Day parts section */
     .day-parts {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
-        margin-bottom: 0.8em !important;
     }
     
     .day-part {
         background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
+        border: 1px solid #d4af37 !important;
+        padding: 1em !important;
+        display: block !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
     .time-badge {
-        background: #000 !important;
-        color: #fff !important;
-        padding: 0.1em 0.4em !important;
-        border-radius: 0 !important;
+        background: #d4af37 !important;
+        color: #000 !important;
+        padding: 0.2em 0.5em !important;
+        font-size: 8pt !important;
+        font-weight: 600 !important;
         display: inline-block !important;
-        margin-bottom: 0.3em !important;
-        font-size: 7pt !important;
-        font-weight: 500 !important;
-        text-transform: uppercase !important;
+        margin-bottom: 0.5em !important;
+        visibility: visible !important;
     }
     
-    .tactics h5 {
-        margin-top: 0.5em !important;
-        margin-bottom: 0.2em !important;
-        color: #000 !important;
-        font-size: 9pt !important;
-        font-weight: 500 !important;
-    }
-    
-    .tactics ul {
-        margin-left: 1.5em !important;
-    }
-    
-    .tactics li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    /* Results highlight */
-    .results-highlight {
+    /* Campaign Section - Dark background with white text */
+    .campaign {
+        background: #1a1a1a !important;
+        color: #fff !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
         page-break-inside: avoid !important;
-        margin: 0.8em 0 !important;
-    }
-    
-    .results-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
-    }
-    
-    .result-card {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        text-align: center !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .result-icon {
-        font-size: 16pt !important;
+        page-break-after: avoid !important;
         display: block !important;
-        margin-bottom: 0.2em !important;
+        visibility: visible !important;
     }
     
-    .result-card h4 {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 9pt !important;
+    .campaign * {
+        color: #fff !important;
+        background: transparent !important;
+        visibility: visible !important;
     }
     
-    .result-card p {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 8pt !important;
-    }
-    
-    .result-card small {
+    .campaign .section-header h2 {
+        color: #fff !important;
         display: block !important;
-        margin-top: 0.2em !important;
-        font-size: 6pt !important;
-        color: #666 !important;
-        font-style: italic !important;
+        visibility: visible !important;
     }
     
-    /* Campaign tactics */
+    .campaign .section-subtitle {
+        color: rgba(255,255,255,0.8) !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
     .campaign-tactics {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
-        margin-bottom: 0.8em !important;
     }
     
     .tactic-card {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1.5em !important;
+        color: #fff !important;
+        display: block !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
+    }
+    
+    .tactic-card.innovation-hub {
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        visibility: visible !important;
     }
     
     .tactic-number {
-        background: #000 !important;
-        color: #fff !important;
-        width: 1.2em !important;
-        height: 1.2em !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-weight: 600 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 8pt !important;
-    }
-    
-    .tactic-card h3 {
+        background: #d4af37 !important;
         color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 10pt !important;
-    }
-    
-    .tactic-card p {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 8pt !important;
-    }
-    
-    .tactic-card ul {
-        margin-left: 1.5em !important;
-        margin-top: 0.5em !important;
-    }
-    
-    .tactic-card li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    /* Campaign deliverables */
-    .campaign-deliverables {
-        page-break-inside: avoid !important;
-        margin: 0.8em 0 !important;
-    }
-    
-    .campaign-deliverables h3 {
-        color: #000 !important;
-        margin-bottom: 1em !important;
-        font-weight: 500 !important;
-        font-size: 12pt !important;
-    }
-    
-    .deliverables-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
-    }
-    
-    .deliverable-item {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .deliverable-number {
-        background: #000 !important;
-        color: #fff !important;
         width: 2em !important;
         height: 2em !important;
         border-radius: 50% !important;
@@ -586,430 +493,32 @@
         align-items: center !important;
         justify-content: center !important;
         font-weight: 600 !important;
+        margin-bottom: 1em !important;
         font-size: 10pt !important;
-        flex-shrink: 0 !important;
+        visibility: visible !important;
     }
     
-    .deliverable-content h4 {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 9pt !important;
+    .tactic-card h3 {
+        color: #d4af37 !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    .deliverable-content p {
-        margin-bottom: 0 !important;
-        font-size: 7pt !important;
-        color: #000 !important;
-    }
-    
-    /* Products section */
-    .products-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .product-card {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .product-badge {
-        background: #000 !important;
+    .tactic-card p {
         color: #fff !important;
-        padding: 0.1em 0.4em !important;
-        border-radius: 0 !important;
-        display: inline-block !important;
-        margin-bottom: 0.5em !important;
-        font-size: 7pt !important;
-        text-transform: uppercase !important;
-        font-weight: 500 !important;
+        margin-bottom: 1em !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    .product-card h3 {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 10pt !important;
-    }
-    
-    .product-description {
-        margin-bottom: 0.5em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    .product-focus h4 {
-        margin-bottom: 0.2em !important;
-        color: #000 !important;
-        font-size: 9pt !important;
-        font-weight: 500 !important;
-    }
-    
-    .product-focus ul {
-        margin-left: 1.5em !important;
-    }
-    
-    .product-focus li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    /* Investment section */
-    .investment-overview {
-        page-break-inside: avoid !important;
-    }
-    
-    .investment-breakdown {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5em !important;
-        margin: 0.8em 0 !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .investment-category {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .category-amount {
-        font-size: 14pt !important;
-        font-weight: 300 !important;
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .investment-category h4 {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 9pt !important;
-    }
-    
-    .investment-category ul {
-        margin-left: 1.5em !important;
-    }
-    
-    .investment-category li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    .investment-hero {
-        text-align: center !important;
-        margin: 0.8em 0 !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .investment-total {
-        background: #fff !important;
-        border: 2px solid #000 !important;
-        padding: 1em !important;
-        display: inline-block !important;
-    }
-    
-    .total-amount {
-        font-size: 18pt !important;
-        font-weight: 300 !important;
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-    }
-    
-    /* Projected returns */
-    .projected-returns {
-        page-break-inside: avoid !important;
-        margin: 0.8em 0 !important;
-    }
-    
-    .returns-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
-    }
-    
-    .return-item {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        text-align: center !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .return-number {
-        font-size: 16pt !important;
-        font-weight: 300 !important;
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-    }
-    
-    .return-label {
-        font-weight: 400 !important;
-        color: #000 !important;
-        margin-bottom: 0.1em !important;
-        font-size: 8pt !important;
-    }
-    
-    .return-note {
-        font-size: 7pt !important;
-        color: #666 !important;
-        font-style: italic !important;
-    }
-    
-    /* Timeline section */
-    .timeline-content {
-        page-break-inside: avoid !important;
-        margin-bottom: 0.8em !important;
-    }
-    
-    .timeline-phase {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        margin-bottom: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .phase-date {
-        background: #000 !important;
-        color: #fff !important;
-        padding: 0.1em 0.4em !important;
-        border-radius: 0 !important;
-        display: inline-block !important;
-        margin-bottom: 0.5em !important;
-        font-size: 7pt !important;
-        font-weight: 500 !important;
-        text-transform: uppercase !important;
-    }
-    
-    .timeline-phase h3 {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 10pt !important;
-    }
-    
-    .timeline-phase ul {
-        margin-left: 1.5em !important;
-        margin-top: 0.5em !important;
-    }
-    
-    .timeline-phase li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    .dynamic-content-note {
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        padding: 0.5em !important;
-        margin-top: 0.5em !important;
-        font-weight: 500 !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    .timeline-callout {
-        background: #fff !important;
-        border: 2px solid #000 !important;
-        padding: 1em !important;
-        margin: 0.8em 0 !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .timeline-callout h3 {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
-    }
-    
-    .timeline-callout p {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 8pt !important;
-    }
-    
-    .result-highlight {
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        padding: 0.5em !important;
-        margin-top: 0.5em !important;
-        font-weight: 500 !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    /* Day-parting section */
-    .day-parting-section {
-        page-break-inside: avoid !important;
-        margin: 0.8em 0 !important;
-    }
-    
-    .day-parting-section h3 {
-        color: #000 !important;
-        margin-bottom: 0.5em !important;
-        font-size: 12pt !important;
-        text-align: center !important;
-    }
-    
-    .day-parting-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 0.5em !important;
-    }
-    
-    .day-parting-item {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        text-align: center !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .day-parting-item h4 {
-        color: #000 !important;
-        margin-bottom: 0.2em !important;
-        font-size: 9pt !important;
-        font-weight: 500 !important;
-    }
-    
-    .day-parting-item p {
-        color: #000 !important;
-        font-size: 8pt !important;
-        margin: 0 !important;
-    }
-    
-    /* Contact section */
-    .contact-wrapper {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.8em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .contact-info {
-        background: #fff !important;
-        border: 1px solid #ccc !important;
-        padding: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .contact-info h3 {
-        margin-bottom: 0.2em !important;
-        color: #000 !important;
-        font-size: 9pt !important;
-    }
-    
-    .contact-info p {
-        margin-bottom: 0.3em !important;
-        color: #000 !important;
-        font-size: 9pt !important;
-        white-space: normal !important;
-        line-height: 1.3 !important;
-    }
-    
-    .contact-details {
-        margin-top: 0.5em !important;
-    }
-    
-    .contact-details span {
-        margin-right: 0.5em !important;
-        color: #000 !important;
-        font-size: 7pt !important;
-    }
-    
-    .contact-details strong {
-        color: #000 !important;
-        font-weight: 500 !important;
-    }
-    
-    .footer-logos-text {
-        grid-column: 1 / -1 !important;
-        text-align: center !important;
-        margin-top: 0.5em !important;
-        font-weight: 400 !important;
-        color: #000 !important;
-        font-size: 8pt !important;
-    }
-    
-    /* Footer */
-    .footer {
-        text-align: center !important;
-        margin-top: 0.8em !important;
-        padding-top: 0.5em !important;
-        border-top: 1px solid #ccc !important;
-        page-break-inside: avoid !important;
-        background: #fff !important;
-        color: #000 !important;
-    }
-    
-    .footer p {
-        color: #000 !important;
-        font-size: 7pt !important;
-    }
-    
-    /* Page breaks */
-    .opportunity,
-    .campaign,
-    .products,
-    .investment,
-    .timeline {
-        page-break-before: auto !important;
-    }
-    
-    /* Links */
-    a {
-        color: #000 !important;
-        text-decoration: underline !important;
-    }
-    
-    /* Lists */
-    ul, ol {
-        margin-left: 1.5em !important;
-    }
-    
-    li {
-        margin-bottom: 0.1em !important;
-        color: #000 !important;
-    }
-    
-    /* Tables */
-    table {
-        border-collapse: collapse !important;
-        width: 100% !important;
-        margin: 0.5em 0 !important;
-    }
-    
-    th, td {
-        border: 1px solid #ccc !important;
-        padding: 0.2em !important;
-        text-align: left !important;
-        color: #000 !important;
-    }
-    
-    th {
-        background: #f9f9f9 !important;
-        font-weight: 500 !important;
-    }
-    
-    /* Force all backgrounds to be visible in print */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    /* Innovation Hub Time Slots - Print Styles */
     .time-slots {
         display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 0.5em !important;
-        margin-top: 0.5em !important;
+        margin-top: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
     }
     
     .time-slot {
@@ -1017,9 +526,9 @@
         align-items: center !important;
         gap: 0.5em !important;
         padding: 0.5em !important;
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        border-radius: 0 !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
@@ -1034,212 +543,32 @@
         border: 1px solid #000 !important;
         border-radius: 50% !important;
         flex-shrink: 0 !important;
+        visibility: visible !important;
     }
     
     .time-content h4 {
-        color: #000 !important;
+        color: #d4af37 !important;
         margin-bottom: 0.2em !important;
-        font-weight: 500 !important;
-        font-size: 8pt !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .time-content p {
-        color: #000 !important;
+        color: #fff !important;
+        font-size: 9pt !important;
         margin: 0 !important;
-        font-size: 7pt !important;
-        font-weight: 300 !important;
-    }
-    
-    /* Investment Section Headers - Print Styles */
-    .investment-header,
-    .impact-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .investment-icon,
-    .impact-icon {
-        font-size: 12pt !important;
-        width: 30px !important;
-        height: 30px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #000 !important;
-        border-radius: 50% !important;
-    }
-    
-    .investment-header h3,
-    .impact-header h3 {
-        color: #000 !important;
-        margin: 0 !important;
-        font-weight: 500 !important;
-        font-size: 10pt !important;
-    }
-    
-    /* Return Items with Icons - Print Styles */
-    .return-icon {
-        font-size: 14pt !important;
-        margin-bottom: 0.5em !important;
         display: block !important;
+        visibility: visible !important;
     }
     
-    /* Dynamic Content Note - Print Styles */
-    .dynamic-content-note {
-        background: #fff !important;
-        border: 2px solid #000 !important;
-        padding: 1em !important;
-        border-radius: 0 !important;
-        margin-top: 0.5em !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .dynamic-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        margin-bottom: 0.5em !important;
-    }
-    
-    .dynamic-icon {
-        font-size: 10pt !important;
-        width: 25px !important;
-        height: 25px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #000 !important;
-        border-radius: 50% !important;
-    }
-    
-    .dynamic-header h4 {
-        color: #000 !important;
-        margin: 0 !important;
-        font-weight: 500 !important;
-        font-size: 9pt !important;
-    }
-    
-    .dynamic-slots {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 0.3em !important;
-    }
-    
-    .dynamic-slot {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 0.3em 0.5em !important;
-        background: #f9f9f9 !important;
-        border: 1px solid #000 !important;
-        border-radius: 0 !important;
-    }
-    
-    .slot-time {
-        color: #000 !important;
-        font-weight: 500 !important;
-        font-size: 7pt !important;
-    }
-    
-    .slot-content {
-        color: #000 !important;
-        font-weight: 300 !important;
-        font-size: 7pt !important;
-    }
-    
-    /* Timeline Callout Redesign - Print Styles */
-    .timeline-callout {
-        background: #fff !important;
-        border: 2px solid #000 !important;
-        padding: 1em !important;
-        border-radius: 0 !important;
-        margin: 1em 0 !important;
-        page-break-inside: avoid !important;
-    }
-    
-    .callout-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5em !important;
-        margin-bottom: 1em !important;
-    }
-    
-    .callout-icon {
-        font-size: 14pt !important;
-        width: 35px !important;
-        height: 35px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #000 !important;
-        border-radius: 50% !important;
-    }
-    
-    .callout-header h3 {
-        color: #000 !important;
-        margin: 0 !important;
-        font-weight: 500 !important;
-        font-size: 12pt !important;
-    }
-    
-    .callout-content {
-        display: grid !important;
-        gap: 1em !important;
-    }
-    
-    .experience-highlight,
-    .result-highlight {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 0.5em !important;
-        padding: 0.8em !important;
-        background: #f9f9f9 !important;
-        border: 1px solid #000 !important;
-        border-radius: 0 !important;
-    }
-    
-    .experience-icon,
-    .result-icon {
-        font-size: 12pt !important;
-        width: 30px !important;
-        height: 30px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #000 !important;
-        border-radius: 50% !important;
-        flex-shrink: 0 !important;
-    }
-    
-    .experience-text h4,
-    .result-text h4 {
-        color: #000 !important;
-        margin-bottom: 0.3em !important;
-        font-weight: 500 !important;
-        font-size: 9pt !important;
-    }
-    
-    .experience-text p,
-    .result-text p {
-        color: #000 !important;
-        margin: 0 !important;
-        font-weight: 300 !important;
-        line-height: 1.3 !important;
-        font-size: 7pt !important;
-    }
-
-    /* Media Integration Tactics - Print Styles */
     .media-tactics {
         display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 0.5em !important;
-        margin-top: 0.5em !important;
+        margin-top: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
     }
     
     .media-tactic {
@@ -1247,9 +576,9 @@
         align-items: center !important;
         gap: 0.5em !important;
         padding: 0.5em !important;
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        border-radius: 0 !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
@@ -1264,28 +593,32 @@
         border: 1px solid #000 !important;
         border-radius: 50% !important;
         flex-shrink: 0 !important;
+        visibility: visible !important;
     }
     
     .tactic-content h4 {
-        color: #000 !important;
+        color: #d4af37 !important;
         margin-bottom: 0.2em !important;
-        font-weight: 500 !important;
-        font-size: 8pt !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .tactic-content p {
-        color: #000 !important;
+        color: #fff !important;
+        font-size: 9pt !important;
         margin: 0 !important;
-        font-size: 7pt !important;
-        font-weight: 400 !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
-    /* Influencer Network Types - Print Styles */
     .influencer-types {
         display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 0.5em !important;
-        margin-top: 0.5em !important;
+        margin-top: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
     }
     
     .influencer-type {
@@ -1293,9 +626,9 @@
         align-items: center !important;
         gap: 0.5em !important;
         padding: 0.5em !important;
-        background: #fff !important;
-        border: 1px solid #000 !important;
-        border-radius: 0 !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        visibility: visible !important;
         page-break-inside: avoid !important;
     }
     
@@ -1310,19 +643,681 @@
         border: 1px solid #000 !important;
         border-radius: 50% !important;
         flex-shrink: 0 !important;
+        visibility: visible !important;
     }
     
     .influencer-content h4 {
-        color: #000 !important;
+        color: #d4af37 !important;
         margin-bottom: 0.2em !important;
-        font-weight: 500 !important;
-        font-size: 8pt !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .influencer-content p {
-        color: #000 !important;
+        color: #fff !important;
+        font-size: 9pt !important;
         margin: 0 !important;
-        font-size: 7pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .campaign-deliverables {
+        margin: 2em 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .campaign-deliverables h3 {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        color: #d4af37 !important;
+        margin-bottom: 1em !important;
+        font-size: 14pt !important;
         font-weight: 400 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .deliverables-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .deliverable-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5em !important;
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1em !important;
+        color: #fff !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .deliverable-number {
+        background: #d4af37 !important;
+        color: #000 !important;
+        width: 2em !important;
+        height: 2em !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: 600 !important;
+        font-size: 12pt !important;
+        flex-shrink: 0 !important;
+        visibility: visible !important;
+    }
+    
+    .deliverable-content h4 {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        color: #d4af37 !important;
+        margin-bottom: 0.2em !important;
+        font-size: 10pt !important;
+        font-weight: 400 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .deliverable-content p {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        color: #fff !important;
+        font-size: 9pt !important;
+        font-weight: 300 !important;
+        margin: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Products Section - White background with dark text */
+    .products {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .products * {
+        color: #000 !important;
+        background: transparent !important;
+        visibility: visible !important;
+    }
+    
+    .products .section-header h2 {
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .products .section-subtitle {
+        color: #666 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .products-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .product-card {
+        background: #fff !important;
+        border: 2px solid #d4af37 !important;
+        padding: 1.5em !important;
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .product-badge {
+        background: #d4af37 !important;
+        color: #000 !important;
+        padding: 0.2em 0.5em !important;
+        font-size: 8pt !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
+        margin-bottom: 0.5em !important;
+        visibility: visible !important;
+    }
+    
+    .product-card h3 {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 12pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .product-description {
+        color: #000 !important;
+        margin-bottom: 1em !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .product-focus h4 {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        font-weight: 600 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .product-focus ul {
+        margin-left: 1.5em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .product-focus li {
+        color: #000 !important;
+        margin-bottom: 0.2em !important;
+        font-size: 9pt !important;
+        display: list-item !important;
+        visibility: visible !important;
+    }
+    
+    /* Investment Section - Dark background with white text */
+    .investment {
+        background: #1a1a1a !important;
+        color: #fff !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment * {
+        color: #fff !important;
+        background: transparent !important;
+        visibility: visible !important;
+    }
+    
+    .investment .section-header h2 {
+        color: #fff !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment .section-subtitle {
+        color: rgba(255,255,255,0.8) !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment-breakdown {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .investment-category {
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1.5em !important;
+        color: #fff !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .category-amount {
+        color: #d4af37 !important;
+        font-size: 16pt !important;
+        font-weight: 300 !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment-category h4 {
+        color: #d4af37 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment-category ul {
+        margin-left: 1.5em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .investment-category li {
+        color: #fff !important;
+        margin-bottom: 0.2em !important;
+        font-size: 9pt !important;
+        display: list-item !important;
+        visibility: visible !important;
+    }
+    
+    .investment-hero {
+        text-align: center !important;
+        margin: 2em 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .investment-total {
+        background: rgba(255,255,255,0.1) !important;
+        border: 2px solid #d4af37 !important;
+        padding: 2em !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .total-amount {
+        color: #d4af37 !important;
+        font-size: 24pt !important;
+        font-weight: 300 !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .investment-total p {
+        color: #fff !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .projected-returns {
+        margin: 2em 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .returns-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .return-item {
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 1.5em !important;
+        text-align: center !important;
+        color: #fff !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .return-number {
+        color: #d4af37 !important;
+        font-size: 18pt !important;
+        font-weight: 300 !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .return-label {
+        color: #fff !important;
+        font-size: 10pt !important;
+        font-weight: 500 !important;
+        margin-bottom: 0.2em !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .return-note {
+        color: rgba(255,255,255,0.7) !important;
+        font-size: 8pt !important;
+        font-style: italic !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Timeline Section - Light background with dark text */
+    .timeline {
+        background: #f8f8f8 !important;
+        color: #000 !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .timeline * {
+        color: #000 !important;
+        background: transparent !important;
+        visibility: visible !important;
+    }
+    
+    .timeline .section-header h2 {
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .timeline .section-subtitle {
+        color: #666 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .timeline-phase {
+        background: #fff !important;
+        border: 1px solid #d4af37 !important;
+        padding: 1em !important;
+        margin-bottom: 1em !important;
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .phase-date {
+        background: #d4af37 !important;
+        color: #000 !important;
+        padding: 0.2em 0.5em !important;
+        font-size: 8pt !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
+        margin-bottom: 0.5em !important;
+        visibility: visible !important;
+    }
+    
+    .timeline-phase h3 {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 12pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .timeline-phase ul {
+        margin-left: 1.5em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .timeline-phase li {
+        color: #000 !important;
+        margin-bottom: 0.2em !important;
+        font-size: 9pt !important;
+        display: list-item !important;
+        visibility: visible !important;
+    }
+    
+    .timeline-callout {
+        background: #fff !important;
+        border: 2px solid #d4af37 !important;
+        padding: 1.5em !important;
+        margin: 1em 0 !important;
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+        text-align: left !important;
+    }
+    
+    .timeline-callout h3 {
+        font-family: "Cormorant Garamond", "Playfair Display", serif !important;
+        color: #000 !important;
+        margin-top: 1em !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        font-weight: 400 !important;
+        text-align: left !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .timeline-callout p {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        font-weight: 300 !important;
+        text-align: left !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .day-parting-section {
+        margin: 2em 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .day-parting-section h3 {
+        color: #000 !important;
+        margin-bottom: 1em !important;
+        font-size: 12pt !important;
+        text-align: center !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .day-parting-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1em !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .day-parting-item {
+        background: #fff !important;
+        border: 1px solid #d4af37 !important;
+        padding: 1em !important;
+        text-align: center !important;
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .day-parting-item h4 {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .day-parting-item p {
+        color: #000 !important;
+        font-size: 9pt !important;
+        margin: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Contact Section - White background with dark text */
+    .contact {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 1em 0 !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #d4af37 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .contact * {
+        color: #000 !important;
+        background: transparent !important;
+        visibility: visible !important;
+    }
+    
+    .contact .section-header h2 {
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .contact .section-subtitle {
+        color: #666 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .contact-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1em !important;
+        margin: 1em 0 !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .contact-info {
+        background: #fff !important;
+        border: 2px solid #d4af37 !important;
+        padding: 1.5em !important;
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+        text-align: center !important;
+    }
+    
+    .contact-info h3 {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 12pt !important;
+        display: block !important;
+        visibility: visible !important;
+        text-align: center !important;
+    }
+    
+    .contact-info p {
+        color: #000 !important;
+        margin-bottom: 0.5em !important;
+        font-size: 10pt !important;
+        display: block !important;
+        visibility: visible !important;
+        text-align: center !important;
+    }
+    
+    .contact-details {
+        margin-top: 1em !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        visibility: visible !important;
+        text-align: center !important;
+    }
+    
+    .contact-details span {
+        color: #666 !important;
+        font-size: 9pt !important;
+        margin-right: 0.5em !important;
+        display: inline !important;
+        visibility: visible !important;
+    }
+    
+    .contact-details strong {
+        color: #000 !important;
+        font-weight: 600 !important;
+        display: inline !important;
+        visibility: visible !important;
+    }
+    
+    /* Footer */
+    .footer {
+        background: #1a1a1a !important;
+        color: #fff !important;
+        text-align: center !important;
+        padding: 1em 0 !important;
+        margin-top: 2em !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .footer p {
+        color: #fff !important;
+        font-size: 9pt !important;
+        margin: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Lists */
+    ul, ol {
+        margin-left: 1.5em !important;
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid !important;
+    }
+    
+    li {
+        margin-bottom: 0.2em !important;
+        display: list-item !important;
+        visibility: visible !important;
+    }
+    
+    /* Links */
+    a {
+        color: #d4af37 !important;
+        text-decoration: underline !important;
+        display: inline !important;
+        visibility: visible !important;
+    }
+    
+    /* Icons */
+    .time-icon,
+    .tactic-icon,
+    .influencer-icon,
+    .investment-icon,
+    .impact-icon,
+    .callout-icon,
+    .experience-icon,
+    .result-icon,
+    .dynamic-icon {
+        font-size: 12pt !important;
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #f0f0f0 !important;
+        border: 1px solid #000 !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
+        visibility: visible !important;
     }
 } 
