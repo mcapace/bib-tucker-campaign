@@ -187,6 +187,12 @@ strong {
     font-size: 0.9rem;
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
 .logo-text {
     font-family: var(--font-display);
     font-weight: 400;
