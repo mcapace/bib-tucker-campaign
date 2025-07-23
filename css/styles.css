@@ -413,10 +413,10 @@ strong {
 
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-bottom: 3rem;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1092,6 +1092,20 @@ strong {
     letter-spacing: -0.02em;
 }
 
+.investment-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.investment-category ul {
+    flex-grow: 1;
+}
+
+.investment-category .category-amount {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
 .investment-category h4 {
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -1595,10 +1609,65 @@ strong {
     transition: var(--transition);
 }
 
-.time-slot:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(212, 175, 55, 0.3);
+/* Morning theme - Coffee culture */
+.time-slot.morning:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(160, 82, 45, 0.2) 100%);
+    border-color: rgba(139, 69, 19, 0.5);
     transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+/* Morning theme - Coffee culture */
+.time-slot.morning:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(160, 82, 45, 0.2) 100%);
+    border-color: rgba(139, 69, 19, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+/* Afternoon theme - Portfolio education */
+.time-slot.afternoon:hover {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.3) 0%, rgba(100, 149, 237, 0.2) 100%);
+    border-color: rgba(70, 130, 180, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(70, 130, 180, 0.3);
+}
+
+/* Evening theme - BBQ & grilling */
+.time-slot.evening:hover {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.3) 0%, rgba(255, 140, 0, 0.2) 100%);
+    border-color: rgba(255, 69, 0, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3);
+}
+
+/* Late night theme - Cocktails & night-cap */
+.time-slot.late-night:hover {
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.3) 0%, rgba(138, 43, 226, 0.2) 100%);
+    border-color: rgba(75, 0, 130, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.3);
+}
+
+/* Tactic card background changes on time slot hover */
+.tactic-card.innovation-hub:has(.time-slot.morning:hover) {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+    border-color: rgba(139, 69, 19, 0.2);
+}
+
+.tactic-card.innovation-hub:has(.time-slot.afternoon:hover) {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1) 0%, rgba(100, 149, 237, 0.05) 100%);
+    border-color: rgba(70, 130, 180, 0.2);
+}
+
+.tactic-card.innovation-hub:has(.time-slot.evening:hover) {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.1) 0%, rgba(255, 140, 0, 0.05) 100%);
+    border-color: rgba(255, 69, 0, 0.2);
+}
+
+.tactic-card.innovation-hub:has(.time-slot.late-night:hover) {
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.1) 0%, rgba(138, 43, 226, 0.05) 100%);
+    border-color: rgba(75, 0, 130, 0.2);
 }
 
 .time-icon {
@@ -1938,7 +2007,7 @@ strong {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
 }
 
 .influencer-type {
