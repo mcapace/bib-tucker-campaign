@@ -360,6 +360,14 @@ strong {
     font-weight: 300;
 }
 
+.hero-innovation h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
 .hero-partners {
     display: flex;
     justify-content: center;
@@ -986,6 +994,45 @@ strong {
     font-size: 1.2rem;
 }
 
+.product-logo {
+    width: 100px;
+    height: auto;
+    margin: 0.5rem auto 1rem auto;
+    opacity: 0.7;
+    display: block;
+}
+
+.product-bottle {
+    width: 120px;
+    height: 180px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+.product-card.gold-roast .product-bottle {
+    width: 180px;
+    height: 260px;
+    min-height: 260px;
+    max-height: 260px;
+    margin-top: -40px;
+}
+
+.product-card.gold-roast h3 {
+    margin-top: -40px;
+}
+
+.product-card.gold-roast .product-description {
+    margin-top: 0px;
+}
+
+.product-card.gold-roast .product-focus {
+    margin-top: 5px;
+}
+
 /* Investment Section */
 .investment {
     padding: 6rem 0;
@@ -1556,6 +1603,7 @@ strong {
 .impact-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.8rem;
     margin-bottom: 1rem;
 }
@@ -1577,6 +1625,14 @@ strong {
     color: var(--white);
     margin: 0;
     font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.investment-total h3 {
+    color: var(--white);
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 /* Return Items with Icons */
