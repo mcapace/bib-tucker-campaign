@@ -1208,8 +1208,8 @@ strong {
 }
 
 .timeline-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -1538,6 +1538,11 @@ strong {
     
     .contact-wrapper {
         grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .print-button-fixed {
