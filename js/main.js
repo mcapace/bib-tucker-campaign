@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initTimeBasedContent();
     initPrintFunctionality();
+    initTimePartingShowcase();
 });
 
 // Navigation functionality
@@ -364,6 +365,143 @@ window.BibTuckerCampaign = {
     trackEngagement,
     updateTimeBasedContent: initTimeBasedContent
 };
+
+// Time-Parting Showcase functionality
+function initTimePartingShowcase() {
+    const legendItems = document.querySelectorAll('.legend-item');
+    const contentPreviews = document.querySelectorAll('.content-preview');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.slide-nav.prev');
+    const nextBtn = document.querySelector('.slide-nav.next');
+    
+    if (!legendItems.length || !contentPreviews.length) return;
+    
+    // Define time periods array first
+    const timePeriods = ['morning', 'midday', 'night', 'late-night'];
+    let currentTimeIndex = 0;
+    
+    // Function to update slide
+    function updateSlide(index) {
+        currentTimeIndex = index;
+        const selectedTime = timePeriods[index];
+        
+        // Update active legend item
+        legendItems.forEach(item => item.classList.remove('active'));
+        const activeLegendItem = legendItems[index];
+        if (activeLegendItem) activeLegendItem.classList.add('active');
+        
+        // Update content display
+        contentPreviews.forEach(preview => {
+            preview.classList.remove('active');
+            if (preview.getAttribute('data-time') === selectedTime) {
+                preview.classList.add('active');
+            }
+        });
+        
+        // Update indicators
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+        
+        // Track interaction
+        trackEngagement('time_parting_switch', selectedTime);
+    }
+    
+    // Add click event listeners to legend items
+    legendItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            updateSlide(index);
+        });
+    });
+    
+    // Add click event listeners to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            updateSlide(index);
+        });
+    });
+    
+    // Add navigation arrow functionality
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            const newIndex = (currentTimeIndex - 1 + timePeriods.length) % timePeriods.length;
+            updateSlide(newIndex);
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const newIndex = (currentTimeIndex + 1) % timePeriods.length;
+            updateSlide(newIndex);
+        });
+    }
+    
+    // Auto-rotate through time periods (optional)
+    function autoRotate() {
+        const nextIndex = (currentTimeIndex + 1) % timePeriods.length;
+        updateSlide(nextIndex);
+    }
+    
+    // Auto-rotate every 3 seconds
+    let autoRotateInterval = setInterval(autoRotate, 3000);
+    
+    // Pause auto-rotation on hover
+    const showcase = document.querySelector('.time-parting-showcase');
+    if (showcase) {
+        showcase.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateInterval);
+        });
+        
+        showcase.addEventListener('mouseleave', () => {
+            autoRotateInterval = setInterval(autoRotate, 3000);
+        });
+    }
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            
+            if (e.key === 'ArrowLeft') {
+                const newIndex = (currentTimeIndex - 1 + timePeriods.length) % timePeriods.length;
+                updateSlide(newIndex);
+            } else {
+                const newIndex = (currentTimeIndex + 1) % timePeriods.length;
+                updateSlide(newIndex);
+            }
+        }
+    });
+    
+    // Add touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    showcase.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    showcase.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next
+                const newIndex = (currentTimeIndex + 1) % timePeriods.length;
+                updateSlide(newIndex);
+            } else {
+                // Swipe right - previous
+                const newIndex = (currentTimeIndex - 1 + timePeriods.length) % timePeriods.length;
+                updateSlide(newIndex);
+            }
+        }
+    }
+}
 
 
 
