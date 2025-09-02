@@ -2002,55 +2002,12 @@ strong {
     font-weight: 400;
 }
 
-/* Digital Amplification Tactics - Matching 24/7 Dynamic Content Hub */
+/* Digital Amplification Tactics - Matching Media Integration */
 .digital-amplification .media-tactics {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-    margin-top: 1.5rem !important;
-}
-
-.digital-tactic {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: var(--transition);
-}
-
-.digital-tactic:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(212, 175, 55, 0.3);
-    transform: translateX(5px);
-}
-
-.digital-tactic .tactic-icon {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(212, 175, 55, 0.2);
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.digital-tactic .tactic-content h4 {
-    color: var(--white);
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.digital-tactic .tactic-content p {
-    color: #ffffff;
-    margin: 0;
-    font-size: 0.85rem;
-    font-weight: 400;
+    margin-top: 1.5rem;
 }
 
 /* Responsive adjustments for new sections */
