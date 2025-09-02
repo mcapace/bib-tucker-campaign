@@ -2004,10 +2004,10 @@ strong {
 
 /* Digital Amplification Tactics - Matching 24/7 Dynamic Content Hub */
 .digital-amplification .media-tactics {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
 }
 
 .digital-tactic {
