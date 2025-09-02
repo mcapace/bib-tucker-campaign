@@ -2056,6 +2056,7 @@ strong {
 /* Responsive adjustments for new sections */
 @media (max-width: 768px) {
     .media-tactic,
+.digital-tactic,
     .influencer-type {
         flex-direction: column;
         text-align: center;
