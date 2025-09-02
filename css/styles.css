@@ -2002,15 +2002,15 @@ strong {
     font-weight: 400;
 }
 
-/* Influencer Network Types - Matching 24/7 Dynamic Content Hub */
-.influencer-network .influencer-types {
+/* Digital Amplification Tactics - Matching 24/7 Dynamic Content Hub */
+.digital-amplification .digital-tactics {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
-.influencer-type {
+.digital-tactic {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -2021,13 +2021,13 @@ strong {
     transition: var(--transition);
 }
 
-.influencer-type:hover {
+.digital-tactic:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(212, 175, 55, 0.3);
     transform: translateX(5px);
 }
 
-.influencer-icon {
+.digital-tactic .tactic-icon {
     font-size: 1.5rem;
     width: 40px;
     height: 40px;
@@ -2039,14 +2039,14 @@ strong {
     flex-shrink: 0;
 }
 
-.influencer-content h4 {
+.digital-tactic .tactic-content h4 {
     color: var(--white);
     margin-bottom: 0.3rem;
     font-weight: 500;
     font-size: 0.95rem;
 }
 
-.influencer-content p {
+.digital-tactic .tactic-content p {
     color: #ffffff;
     margin: 0;
     font-size: 0.85rem;
@@ -2088,7 +2088,7 @@ strong {
 
 .extension-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -2168,6 +2168,13 @@ strong {
 .extension-content li strong {
     color: var(--soft-gold);
     font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .extension-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
